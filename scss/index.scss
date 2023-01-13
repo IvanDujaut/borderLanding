@@ -1,0 +1,23 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+/* MISC */
+
+@import './misc/mixin';
+@import './misc/normalize';
+@import './misc/variables';
+
+/* PARTIALS */
+
+@import './partials/header';
+@import './partials/footer';
+
+/* PAGES */
+
+@import './pages/index';
+@import './pages/aboutUs';
+@import './pages/contactUs';
+@import './pages/downloadBorder';
+@import './pages/howToBorder';
+@import './pages/joinUs';
+@import './pages/meetBorder';
