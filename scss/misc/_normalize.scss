@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: $paragraph-color;
+  background-color: $background;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+a {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: $text-secondary;
+  text-decoration: none;
+  color: $paragraph-color;
+  &:hover {
+    color: $primary-color;
+  }
+}

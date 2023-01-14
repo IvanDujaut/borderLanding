@@ -1,0 +1,65 @@
+header {
+  padding: $sp-sm $sp-xxl; //con bt mejorar
+  width: 100%;
+  box-shadow: 0 0 7px $spotlight-color;
+  top: 0;
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    .menu {
+      display: flex;
+      gap: 5rem;
+    }
+
+    &-toggle {
+      color: $spotlight-color;
+      background: none;
+      border: none;
+      font-size: 30px;
+      padding: 0 20px;
+      line-height: 60px;
+      cursor: pointer;
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: $sp-sm $sp-lg;
+    .navbar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: $background;
+        position: fixed;
+        top: 86px;
+        width: 100%;
+        padding: 2rem;
+        margin: 0 auto;
+        gap: 1rem;
+        height: calc(100% - 86px);
+        overflow-y: auto;
+        right: -65%;
+        transition: right 0.3s;
+        z-index: 10;
+
+        &_visible {
+          right: -100%;
+        }
+      }
+
+      &-toggle {
+        display: block !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap");
+/* MISC */
+/* VARIABLE */
+/* Palette */
+/* Font Sizes */
+/* Spacing */
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #010101;
+  background-color: #ffffff;
+  overflow-x: hidden; }
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0; }
+
+figure {
+  margin: 0; }
+
+a {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6em;
+  text-decoration: none;
+  color: #010101; }
+  a:hover {
+    color: #b2c136; }
+
+/* PARTIALS */
+header {
+  padding: 0.8rem 8rem;
+  width: 100%;
+  box-shadow: 0 0 7px #7b7b7b;
+  top: 0; }
+  header .navbar {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; }
+    header .navbar .menu {
+      display: flex;
+      gap: 5rem; }
+    header .navbar-toggle {
+      color: #7b7b7b;
+      background: none;
+      border: none;
+      font-size: 30px;
+      padding: 0 20px;
+      line-height: 60px;
+      cursor: pointer;
+      display: none; }
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0.8rem 3.2rem; }
+    header .navbar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      header .navbar .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #ffffff;
+        position: fixed;
+        top: 86px;
+        width: 100%;
+        padding: 2rem;
+        margin: 0 auto;
+        gap: 1rem;
+        height: calc(100% - 86px);
+        overflow-y: auto;
+        right: -65%;
+        transition: right 0.3s;
+        z-index: 10; }
+        header .navbar .menu_visible {
+          right: -100%; }
+      header .navbar-toggle {
+        display: block !important; } }
+
+/* PAGES */
