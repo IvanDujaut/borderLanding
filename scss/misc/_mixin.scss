@@ -1,0 +1,9 @@
+@mixin h1Styles {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: $text-heading1;
+    line-height: 46px;
+    letter-spacing: -0.02em;
+    color: $paragraph-color;
+}
