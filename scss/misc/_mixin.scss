@@ -1,9 +1,41 @@
 @mixin h1Styles {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: $text-heading1;
-    line-height: 46px;
-    letter-spacing: -0.02em;
-    color: $paragraph-color;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: $text-heading1;
+  line-height: 46px;
+  letter-spacing: -0.02em;
+  color: $paragraph-color;
+}
+
+@mixin h2Styles {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: $text-heading2;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: $paragraph-color;
+}
+
+@mixin h3Style {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: $text-heading3;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: $paragraph-color;
+}
+
+@mixin paragraph($color) {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: $text-paragraph;
+  line-height: 24px;
+  color: $color;
+  //color: rgba(0, 0, 0, 0.8);
 }
