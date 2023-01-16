@@ -1,0 +1,70 @@
+.howToBorder {
+  padding: $sp-xxxl $sp-xl;
+  width: 100%;
+  h2 {
+    @include h2Styles;
+  }
+  .options {
+    &__item {
+      font-size: $text-anchor;
+      color: $secondary-color;
+      border-bottom: 3px solid;
+    }
+  }
+  .cardsToSend {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(34em, 37em));
+    place-content: center;
+    gap: 3rem;
+    &__description {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      row-gap: 1rem;
+      height: 45em;
+      background: $background;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    h3 {
+        @include h3Styles;
+        font-size: $text-cards-title;
+        text-align: start;
+        color: #373737;
+    }
+    p {
+        @include paragraph($spotlight-color);
+        //height: 7.2rem;
+    }
+  }
+  .cardsToReceive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(34em, 37em));
+    place-content: center;
+    gap: 3rem;
+    &__description {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      row-gap: 1rem;
+      height: 50em;
+      background: $background;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    h3 {
+        @include h3Styles;
+        font-size: $text-cards-title;
+        text-align: start;
+        color: #373737;
+    }
+    p {
+        @include paragraph($spotlight-color);
+        height: 14rem;
+    }
+  }
+}

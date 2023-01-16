@@ -19,7 +19,7 @@
   color: $paragraph-color;
 }
 
-@mixin h3Style {
+@mixin h3Styles {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -36,6 +36,6 @@
   font-weight: 400;
   font-size: $text-paragraph;
   line-height: 24px;
+  letter-spacing: -0.015em;
   color: $color;
-  //color: rgba(0, 0, 0, 0.8);
 }
