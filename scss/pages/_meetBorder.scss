@@ -1,5 +1,6 @@
 .meetBorder {
   padding: $sp-xxxl $sp-xl;
+  //height: 100vh;
   background-color: rgba(178, 193, 54, 0.1);
   &__container {
     position: relative;
@@ -8,13 +9,14 @@
     margin: 0 auto;
     h2 {
       @include h2Styles;
+      max-width: 57rem;
     }
     h3 {
-      @include h3Style;
+      @include h3Styles;
     }
     p {
       @include paragraph(rgba(0, 0, 0, 0.8));
-      max-width: 65rem;
+      max-width: 60rem;
     }
   }
 }
