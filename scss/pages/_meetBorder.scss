@@ -8,11 +8,19 @@
     max-width: 1200px;
     margin: 0 auto;
     h2 {
-      @include h2Styles;
       max-width: 57rem;
     }
-    h3 {
-      @include h3Styles;
+    .shippingImgContainer {
+      animation: shipping 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite both;
+    }
+    .startsImgContainer {
+      animation: starts 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) infinite both;
+    }
+    .heartImgContainer {
+      animation: pulse 2s infinite;
+    }
+    .giftImgContainer {
+      animation: gift 2s cubic-bezier(0.23, 1, 0.32, 1) infinite both;
     }
     p {
       @include paragraph(rgba(0, 0, 0, 0.8));
