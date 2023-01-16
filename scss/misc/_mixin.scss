@@ -39,3 +39,115 @@
   letter-spacing: -0.015em;
   color: $color;
 }
+
+@mixin cards($cardHeight, $textHeight) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(34em, 37em));
+  place-content: center;
+  gap: 3rem;
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    row-gap: 1rem;
+    height: $cardHeight;
+    background: $background;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 2rem;
+    h3 {
+      font-size: $text-cards-title;
+      text-align: start;
+      color: $cardTitle-color;
+    }
+    p {
+      @include paragraph($spotlight-color);
+      height: $textHeight;
+    }
+    &:hover {
+      animation: scale-up 0.8s linear both;
+    }
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bobble {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes shipping {
+  0% {
+    -webkit-transform: translateY(-500px) translateX(500px);
+    transform: translateY(-500px) translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes starts {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  70% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes gift {
+  0% {
+    -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}

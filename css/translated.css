@@ -1,21 +1,68 @@
 /* IMPORTS */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap");
 /* MISC */
+@keyframes scale-up {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes bobble {
+  0% {
+    transform: translateY(10px); }
+  50% {
+    transform: translateY(40px); }
+  100% {
+    transform: translateY(10px); } }
+
+@keyframes shipping {
+  0% {
+    -webkit-transform: translateY(-500px) translateX(500px);
+    transform: translateY(-500px) translateX(500px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+    opacity: 1; } }
+
+@keyframes starts {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  70% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes gift {
+  0% {
+    -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1; } }
+
 /* VARIABLE */
 /* Palette */
 /* Font Sizes */
 /* Spacing */
-/*
-$spacer: 1rem;
-$spacers: (
-  0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-);
-*/
 * {
   margin: 0;
   padding: 0;
@@ -37,6 +84,26 @@ h1 {
   font-size: clamp(2.3rem, calc(3.8vw + 0.17rem), 3.8rem);
   line-height: 46px;
   letter-spacing: -0.02em;
+  color: #010101; }
+
+h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(2.5rem, calc(3.1vw + 0.1rem), 4rem);
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #010101; }
+
+h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(2rem, calc(2vw + 0.1rem), 2.4rem);
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: -0.015em;
   color: #010101; }
 
 ul {
@@ -62,7 +129,9 @@ header {
   padding: 0.8rem 8rem;
   width: 100%;
   box-shadow: 0 0 7px #7b7b7b;
-  top: 0; }
+  position: fixed;
+  z-index: 999;
+  background: #ffffff; }
   header .navbar {
     display: flex;
     align-items: center;
@@ -111,24 +180,17 @@ header {
 
 /* PAGES */
 .banner {
-  padding: 3.2rem 5rem;
+  padding: 12rem 5rem 3.2rem;
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto; }
+  .banner .heroImg-container {
+    animation: bobble 2s infinite; }
 
 .howToBorder {
   padding: 12rem 5rem;
   width: 100%; }
-  .howToBorder h2 {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 700;
-    font-size: clamp(2.5rem, calc(3.1vw + 0.1rem), 4rem);
-    line-height: 50px;
-    text-align: center;
-    letter-spacing: -0.015em;
-    color: #010101; }
   .howToBorder .options__item {
     font-size: clamp(1.7rem, calc(2vw + 0.1rem), 2.4rem);
     color: #5CB2E4;
@@ -143,32 +205,27 @@ header {
       flex-direction: column;
       justify-content: flex-end;
       row-gap: 1rem;
-      height: 45em;
+      height: 43em;
       background: #ffffff;
       box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       margin: 0 auto;
       padding: 2rem; }
-    .howToBorder .cardsToSend h3 {
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 700;
-      font-size: clamp(2rem, calc(2vw + 0.1rem), 2.4rem);
-      line-height: 38px;
-      text-align: center;
-      letter-spacing: -0.015em;
-      color: #010101;
-      font-size: clamp(1.6rem, calc(2vw + 0.1rem), 1.8rem);
-      text-align: start;
-      color: #373737; }
-    .howToBorder .cardsToSend p {
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 400;
-      font-size: clamp(1.4rem, calc(1.45vw + 0.26rem), 1.8rem);
-      line-height: 24px;
-      letter-spacing: -0.015em;
-      color: #7b7b7b; }
+      .howToBorder .cardsToSend__description h3 {
+        font-size: clamp(1.6rem, calc(2vw + 0.1rem), 1.8rem);
+        text-align: start;
+        color: #373737; }
+      .howToBorder .cardsToSend__description p {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(1.4rem, calc(1.45vw + 0.26rem), 1.8rem);
+        line-height: 24px;
+        letter-spacing: -0.015em;
+        color: #7b7b7b;
+        height: 7.4rem; }
+      .howToBorder .cardsToSend__description:hover {
+        animation: scale-up 0.8s linear both; }
   .howToBorder .cardsToReceive {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(34em, 37em));
@@ -185,27 +242,21 @@ header {
       border-radius: 10px;
       margin: 0 auto;
       padding: 2rem; }
-    .howToBorder .cardsToReceive h3 {
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 700;
-      font-size: clamp(2rem, calc(2vw + 0.1rem), 2.4rem);
-      line-height: 38px;
-      text-align: center;
-      letter-spacing: -0.015em;
-      color: #010101;
-      font-size: clamp(1.6rem, calc(2vw + 0.1rem), 1.8rem);
-      text-align: start;
-      color: #373737; }
-    .howToBorder .cardsToReceive p {
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 400;
-      font-size: clamp(1.4rem, calc(1.45vw + 0.26rem), 1.8rem);
-      line-height: 24px;
-      letter-spacing: -0.015em;
-      color: #7b7b7b;
-      height: 14rem; }
+      .howToBorder .cardsToReceive__description h3 {
+        font-size: clamp(1.6rem, calc(2vw + 0.1rem), 1.8rem);
+        text-align: start;
+        color: #373737; }
+      .howToBorder .cardsToReceive__description p {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(1.4rem, calc(1.45vw + 0.26rem), 1.8rem);
+        line-height: 24px;
+        letter-spacing: -0.015em;
+        color: #7b7b7b;
+        height: 14rem; }
+      .howToBorder .cardsToReceive__description:hover {
+        animation: scale-up 0.8s linear both; }
 
 .meetBorder {
   padding: 12rem 5rem;
@@ -216,24 +267,15 @@ header {
     max-width: 1200px;
     margin: 0 auto; }
     .meetBorder__container h2 {
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 700;
-      font-size: clamp(2.5rem, calc(3.1vw + 0.1rem), 4rem);
-      line-height: 50px;
-      text-align: center;
-      letter-spacing: -0.015em;
-      color: #010101;
       max-width: 57rem; }
-    .meetBorder__container h3 {
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 700;
-      font-size: clamp(2rem, calc(2vw + 0.1rem), 2.4rem);
-      line-height: 38px;
-      text-align: center;
-      letter-spacing: -0.015em;
-      color: #010101; }
+    .meetBorder__container .shippingImgContainer {
+      animation: shipping 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite both; }
+    .meetBorder__container .startsImgContainer {
+      animation: starts 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) infinite both; }
+    .meetBorder__container .heartImgContainer {
+      animation: pulse 2s infinite; }
+    .meetBorder__container .giftImgContainer {
+      animation: gift 2s cubic-bezier(0.23, 1, 0.32, 1) infinite both; }
     .meetBorder__container p {
       font-family: "Montserrat";
       font-style: normal;

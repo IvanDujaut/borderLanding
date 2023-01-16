@@ -8,6 +8,7 @@ $paragraph-color: #010101;
 $spotlight-color: #7b7b7b;
 $background: #ffffff;
 $tagParagraph: #121629;
+$cardTitle-color: #373737;
 
 /* Font Sizes */
 $text-heading1: clamp(2.3rem, calc(3.8vw + 0.17rem), 3.8rem);//clamp(3.125rem, calc(3.8vw + 0.17rem), 3.8rem);
@@ -30,15 +31,3 @@ $sp-lg: 3.2rem;
 $sp-md: 1.6rem;
 $sp-sm: 0.8rem;
 $sp-xs: 0.5rem;
-
-/*
-$spacer: 1rem;
-$spacers: (
-  0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-);
-*/

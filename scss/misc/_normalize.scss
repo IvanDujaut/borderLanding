@@ -19,6 +19,14 @@ h1 {
   @include h1Styles;
 }
 
+h2 {
+  @include h2Styles;
+}
+
+h3 {
+  @include h3Styles;
+}
+
 ul {
   list-style-type: none;
   padding-left: 0;

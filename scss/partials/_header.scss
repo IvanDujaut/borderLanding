@@ -2,7 +2,9 @@ header {
   padding: $sp-sm $sp-xxl; //con bt mejorar
   width: 100%;
   box-shadow: 0 0 7px $spotlight-color;
-  top: 0;
+  position: fixed;
+  z-index: 999;
+  background: $background;
 
   .navbar {
     display: flex;
