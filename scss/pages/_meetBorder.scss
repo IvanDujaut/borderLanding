@@ -1,7 +1,7 @@
 .meetBorder {
-  padding: $sp-xxxl $sp-xl;
+  padding: $sp-xxl $sp-xl;
   //height: 100vh;
-  background-color: rgba(178, 193, 54, 0.1);
+  background-color: $green-background;
   &__container {
     position: relative;
     width: 100%;
@@ -11,10 +11,10 @@
       max-width: 57rem;
     }
     .shippingImgContainer {
-      animation: shipping 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite both;
+      animation: shipping 3.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite both;
     }
     .startsImgContainer {
-      animation: starts 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) infinite both;
+      animation: starts 2s ease-in-out infinite both;
     }
     .heartImgContainer {
       animation: pulse 2s infinite;

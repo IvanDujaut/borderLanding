@@ -25,12 +25,10 @@
       src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.0/jquery.validate.min.js"
     ></script>
     <script defer src="./js/index.js"></script>
+    <script defer src="./js/effect.js"></script>
   </head>
   <body id="home">
-    <!-- 
-    ==================
-    ======NAVBAR======
-    ==================-->
+    <!--NAVBAR-->
     <header>
       <nav class="navbar">
         <a class="navbar__link" href="#home">
@@ -47,7 +45,7 @@
             <a class="menu__link" href="#meetBorder"> Solutions </a>
           </li>
           <li class="menu__items">
-            <a class="menu__link" href="#howStart"> How to start </a>
+            <a class="menu__link" href="#howToBorder"> How to start </a>
           </li>
           <li class="menu__items">
             <a class="menu__link" href="#aboutUs"> About us </a>
@@ -69,6 +67,7 @@
       </nav>
     </header>
 
+    <!--BANNER-->
     <section class="banner container-fluid" id="hero">
       <div class="row">
         <div class="col-12 col-lg-6">
@@ -102,6 +101,7 @@
       </div>
     </section>
 
+    <!--MEET BORDER-->
     <section class="meetBorder container-fluid" id="meetBorder">
       <div class="container-fluid meetBorder__container">
         <div class="row gap-5 d-flex justify-content-center">
@@ -111,7 +111,9 @@
           <div class="row justify-content-center">
             <div class="col-12 col-md-6">
               <article class="row justify-content-center">
-                <figure class="d-flex justify-content-center shippingImgContainer">
+                <figure
+                  class="d-flex justify-content-center shippingImgContainer"
+                >
                   <img
                     class="img-fluid"
                     src="./images/shipping.svg"
@@ -129,7 +131,9 @@
             </div>
             <div class="col-12 col-md-6">
               <article class="row justify-content-center">
-                <figure class="d-flex justify-content-center startsImgContainer">
+                <figure
+                  class="d-flex justify-content-center startsImgContainer"
+                >
                   <img src="./images/stars.svg" alt="starts logo" />
                 </figure>
                 <h3 class="d-flex justify-content-center">Divide los costos</h3>
@@ -183,18 +187,34 @@
       </div>
     </section>
 
+    <!--HOW TO BORDEAR-->
     <section class="howToBorder container-fluid" id="howToBorder">
       <div class="row d-flex justify-content-center gap-5">
         <h2 class="text-center">Cómo bordear</h2>
         <ul class="options d-flex justify-content-center gap-5">
           <li>
-            <a class="options__item" href="#">Cuando enviás</a>
+            <a
+              id="toSendAnchor"
+              class="options__item"
+              href="javascript:void(0)"
+              onclick="toSend()"
+            >
+              Cuando enviás
+            </a>
           </li>
           <li>
-            <a class="options__item" href="#">Cuando recibís</a>
+            <a
+              id="toReceiveAnchor"
+              class="options__item options__item--toReceive"
+              href="javascript:void(0)"
+              onclick="toReceive()"
+              >Cuando recibís</a
+            >
           </li>
         </ul>
-        <div class="cardsToSend">
+
+        <!--To Send Section-->
+        <div class="cardsToSend displayVisible" id="toSend">
           <article class="cardsToSend__description">
             <figure class="d-flex justify-content-center">
               <img
@@ -242,7 +262,8 @@
         <!-- Force next columns to break to new line at md breakpoint and up -->
         <div class="w-100 d-none d-md-block"></div>
 
-        <div class="cardsToReceive">
+        <!--To Receive Section-->
+        <div class="cardsToReceive" id="toReceive">
           <article class="cardsToReceive__description">
             <figure class="d-flex justify-content-center">
               <img
@@ -292,6 +313,62 @@
       </div>
     </section>
 
+    <!--ABOUT US-->
+    <section class="aboutUs container-fluid" id="aboutUs">
+      <div class="container-fluid aboutUs__container">
+        <h2 class="text-center">Sobre nosotros</h2>
+        <div class="row gap-5">
+          <div class="container d-flex flex-wrap-reverse align-items-center">
+            <figure class="col-12 col-md-6 swipingLeft-container" id="leftImg">
+              <img
+                class="img-fluid"
+                src="./images/aboutUs-1.svg"
+                alt="boys meeting border logo"
+              />
+            </figure>
+            <article class="col-12 col-md-6">
+              <h3 class="text-center text-md-start">¿Quiénes somos?</h3>
+              <p class="text-center text-md-start">
+                Border es una plataforma para transferir dinero
+                internacionalmente de manera social y divertida.
+              </p>
+            </article>
+          </div>
+
+          <!-- Force next columns to break to new line at md breakpoint and up -->
+          <div class="w-100 d-none d-md-block"></div>
+
+          <div
+            class="container d-flex flex-row-reverse align-items-center flex-wrap-reverse"
+          >
+            <figure
+              class="col-12 col-md-6 swipingRight-container"
+              id="righttImg"
+            >
+              <img
+                class="img-fluid"
+                src="./images/aboutUs-2.svg"
+                alt="Image of people connecting with each other"
+              />
+            </figure>
+            <article class="col-12 col-md-6">
+              <h3 class="text-center text-md-start">¿Cómo surgió Border?</h3>
+              <p class="text-center text-md-start">
+                Hoy en día vivimos en un mundo súper conectado, en donde mandar
+                emails, hacer videollamadas y chatear con personas que están en
+                otros países ocurre casi de manera automática. La idea de Border
+                es poder crear esta misma interacción a través de transferencias
+                de dinero, en donde amigas o familiares puedan enviar dinero
+                para cualquier ocasión, ya sea para un regalo o para compartir
+                momentos especiales como un viaje o una boda.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--OUR TEAM-->
     <script src="./js/bootstrap.bundle.js"></script>
   </body>
 </html>

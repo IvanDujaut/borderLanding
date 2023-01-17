@@ -1,0 +1,30 @@
+.aboutUs {
+  padding: $sp-xxl $sp-xl;
+  background-color: $green-background;
+  width: 100%;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: $sp-xl;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    .swipingLeft-container,
+    .swipingRight-container {
+      opacity: 0;
+    }
+    .swipingLeft {
+      opacity: 1;
+      animation: slide-in-left 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    }
+    .swipingRight {
+      opacity: 1;
+      animation: slide-in-right 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    }
+  }
+  p {
+    @include paragraph($paragraph-color);
+    max-width: 55rem;
+    min-width: 25rem;
+  }
+}
