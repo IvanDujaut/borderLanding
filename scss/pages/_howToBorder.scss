@@ -6,6 +6,9 @@
       font-size: $text-anchor;
       color: $secondary-color;
       border-bottom: 3px solid;
+      &--toReceive {
+        color: $secondary-color-middle;
+      }
     }
   }
   .cardsToSend {
@@ -13,5 +16,6 @@
   }
   .cardsToReceive {
     @include cards(50em, 14rem);
+    display: none;
   }
 }
