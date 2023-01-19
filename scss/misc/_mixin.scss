@@ -187,3 +187,10 @@
     opacity: 1;
   }
 }
+
+.contact .formulario__grupo-btn-enviar {
+  padding: 0 7%;
+  @media screen and (min-width: 768px) {
+    padding: 0 24.5%;
+  }
+}
