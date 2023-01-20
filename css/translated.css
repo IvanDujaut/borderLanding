@@ -195,7 +195,7 @@ header {
       header .navbar .menu {
         flex-direction: column;
         align-items: flex-start;
-        background-color: #ffffff;
+        background-color: #f7f9eb;
         position: fixed;
         top: 86px;
         width: 100%;
@@ -307,6 +307,41 @@ header {
         font-style: normal; }
       .ourTeam .container-box .inputBox button:hover {
         background-color: #f5e356; }
+
+.downloadBorder {
+  padding: 8rem 5rem;
+  background-color: rgba(178, 193, 54, 0.1);
+  width: 100%; }
+  .downloadBorder__container {
+    max-width: 1200px; }
+  .downloadBorder .description {
+    max-width: 56rem;
+    min-width: 30rem;
+    max-height: 26rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem; }
+    .downloadBorder .description p {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(1.4rem, calc(1.45vw + 0.26rem), 1.8rem);
+      line-height: 24px;
+      letter-spacing: -0.015em;
+      color: #010101; }
+    .downloadBorder .description button {
+      padding: 1.5rem 3rem;
+      max-height: 5.5rem;
+      background-color: #b2c136;
+      border-radius: 10px;
+      border: none;
+      font-weight: 700;
+      font-size: clamp(1.4rem, calc(1.45vw + 0.26rem), 1.8rem);
+      color: #010101;
+      font-family: "Montserrat";
+      font-style: normal; }
+    .downloadBorder .description button:hover {
+      background-color: #f5e356; }
 
 .aboutUs {
   padding: 8rem 5rem;
