@@ -1,0 +1,25 @@
+.footer {
+  padding: $sp-xxl;
+  max-width: 1200px;
+  &-top {
+    padding-top: 3rem;
+    border-top: 1px solid $green-line-footer;
+    .options {
+      &__link {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: $text-secondary;
+        line-height: 24px;
+        letter-spacing: -0.015em;
+        color: #000000;
+      }
+      &__left {
+        height: 5.3rem;
+      }
+    }
+  }
+  &-bottom {
+    @include paragraph($paragraph-color);
+  }
+}
