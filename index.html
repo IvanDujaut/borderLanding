@@ -1,291 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="favicon.ico" rel="icon" />
+    <title>Border</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/translated.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <script
+      src="https://kit.fontawesome.com/479550147b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script
+      defer
+      src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.0/jquery.validate.min.js"
+    ></script>
+    <script defer src="./js/index.js"></script>
+    <script defer src="./js/effect.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="favicon.ico" rel="icon" />
-  <title>Border</title>
-  <link rel="stylesheet" href="./css/bootstrap.css" />
-  <link rel="stylesheet" href="./css/translated.css" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <script src="https://kit.fontawesome.com/479550147b.js" crossorigin="anonymous"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script defer src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.0/jquery.validate.min.js"></script>
-  <script defer src="./js/index.js"></script>
-  <script defer src="./js/effect.js"></script>
-</head>
-
-<body id="home">
-  <!--NAVBAR-->
-  <header>
-    <nav class="navbar">
-      <a class="navbar__link" href="#home">
-        <figure>
-          <img class="header-logo" src="./images/borderLogoHeader.svg" alt="" />
-        </figure>
-      </a>
-      <ul class="menu menu_visible">
-        <li class="menu__items">
-          <a class="menu__link" href="#meetBorder"> Solutions </a>
-        </li>
-        <li class="menu__items">
-          <a class="menu__link" href="#howToBorder"> How to start </a>
-        </li>
-        <li class="menu__items">
-          <a class="menu__link" href="#aboutUs"> About us </a>
-        </li>
-        <li class="menu__items">
-          <a class="menu__link" href="#contact"> Contact </a>
-        </li>
-        <li class="menu__items">
-          <a> Es <i class="fa-solid fa-play"></i> </a>
-          <!--<ul>
+  <body id="home">
+    <!--NAVBAR-->
+    <header>
+      <nav class="navbar">
+        <a class="navbar__link" href="#home">
+          <figure>
+            <img
+              class="header-logo"
+              src="./images/borderLogoHeader.svg"
+              alt=""
+            />
+          </figure>
+        </a>
+        <ul class="menu menu_visible">
+          <li class="menu__items">
+            <a class="menu__link" href="#meetBorder"> Solutions </a>
+          </li>
+          <li class="menu__items">
+            <a class="menu__link" href="#howToBorder"> How to start </a>
+          </li>
+          <li class="menu__items">
+            <a class="menu__link" href="#aboutUs"> About us </a>
+          </li>
+          <li class="menu__items">
+            <a class="menu__link" href="#contact"> Contact </a>
+          </li>
+          <li class="menu__items">
+            <a> Es <i class="fa-solid fa-play"></i> </a>
+            <!--<ul>
                     <li><a class="menu__link"> Es </a></li>
                     <li><a class="menu__link"> Eng </a></li>
                   </ul>-->
-        </li>
-      </ul>
-      <button class="navbar-toggle">
-        <i class="fas fa-bars"></i>
-      </button>
-    </nav>
-  </header>
+          </li>
+        </ul>
+        <button class="navbar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
 
-  <!--BANNER-->
-  <section class="banner container-fluid" id="hero">
-    <div class="row">
-      <div class="col-12 col-lg-6">
-        <div class="row">
-          <article class="banner_description d-grid gap-5 col-12 col-sm-7 col-lg-12">
-            <figure class="row logo">
-              <img class="img-fluid col-10 col-sm-12 col-md-10" src="./images/borderHero.webp" alt="Logo de Border" />
+    <!--BANNER-->
+    <section class="banner container-fluid" id="hero">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="row">
+            <article
+              class="banner_description d-grid gap-5 col-12 col-sm-7 col-lg-12"
+            >
+              <figure class="row logo">
+                <img
+                  class="img-fluid col-10 col-sm-12 col-md-10"
+                  src="./images/borderHero.webp"
+                  alt="Logo de Border"
+                />
+              </figure>
+              <h1>
+                Dónde las transferencias de dinero se convierten en algo
+                divertido
+              </h1>
+            </article>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <figure class="heroImg-container d-flex justify-content-center">
+            <img
+              class="img-fluid"
+              src="./images/imgHero.png"
+              alt="Imagen principal"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!--MEET BORDER-->
+    <section class="meetBorder container-fluid" id="meetBorder">
+      <div class="container-fluid meetBorder__container">
+        <div class="row gap-5 d-flex justify-content-center">
+          <h2 class="row">
+            Conocé todo lo que necesitás para empezar a bordear
+          </h2>
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+              <article class="row justify-content-center">
+                <figure
+                  class="d-flex justify-content-center shippingImgContainer"
+                >
+                  <img
+                    class="img-fluid"
+                    src="./images/shipping.svg"
+                    alt="shipping logo"
+                  />
+                </figure>
+                <h3 class="d-flex justify-content-center">
+                  Envía dinero a tus amigas y familiares
+                </h3>
+                <p class="text-center text-md-start">
+                  Con Border puedes transferir el monto que quieras, en la
+                  moneda que quieras y desde donde quieras.
+                </p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6">
+              <article class="row justify-content-center">
+                <figure
+                  class="d-flex justify-content-center startsImgContainer"
+                >
+                  <img src="./images/stars.svg" alt="starts logo" />
+                </figure>
+                <h3 class="d-flex justify-content-center">Divide los costos</h3>
+                <p class="text-center text-md-start">
+                  Compartis cuentas de streaming como Netflix o Spotify con
+                  familiares o amigas? Con Border puedes dividir los costos
+                  entre todas por mas que vivan en otro país.
+                </p>
+              </article>
+            </div>
+          </div>
+          <!-- Force next columns to break to new line at md breakpoint and up -->
+          <div class="w-100 d-none d-md-block"></div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+              <article class="row justify-content-center">
+                <figure class="d-flex justify-content-center heartImgContainer">
+                  <img
+                    class="img-fluid"
+                    src="./images/hearts.svg"
+                    alt="hearts logo"
+                  />
+                </figure>
+                <h3 class="d-flex justify-content-center">
+                  Comparte los buenos momentos
+                </h3>
+                <p class="text-center text-md-start">
+                  Con Border puedes saldar cuentas con tus amigas para cualquier
+                  actividad - desde viajes hasta bodas destino en donde todas se
+                  reúnen en un mismo lugar.
+                </p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6">
+              <article class="row justify-content-center">
+                <figure class="d-flex justify-content-center giftImgContainer">
+                  <img src="./images/gift.svg" alt="gift logo" />
+                </figure>
+                <h3 class="d-flex justify-content-center">
+                  Sorprende regalando
+                </h3>
+                <p class="text-center text-md-start">
+                  Con Border puedes enviar regalos para cualquier ocasión, desde
+                  celebraciones de cumpleaños hasta festejos de graduación.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--HOW TO BORDEAR-->
+    <section class="howToBorder container-fluid" id="howToBorder">
+      <div class="row d-flex justify-content-center gap-5">
+        <h2 class="text-center">Cómo bordear</h2>
+        <ul class="options d-flex justify-content-center gap-5">
+          <li>
+            <a
+              id="toSendAnchor"
+              class="options__item"
+              href="javascript:void(0)"
+              onclick="toSend()"
+            >
+              Cuando enviás
+            </a>
+          </li>
+          <li>
+            <a
+              id="toReceiveAnchor"
+              class="options__item options__item--toReceive"
+              href="javascript:void(0)"
+              onclick="toReceive()"
+              >Cuando recibís</a
+            >
+          </li>
+        </ul>
+
+        <!--To Send Section-->
+        <div class="cardsToSend displayVisible" id="toSend">
+          <article class="cardsToSend__description">
+            <figure class="d-flex justify-content-center">
+              <img
+                class="img-fluid"
+                src="./images/toSend-1.svg"
+                alt="download app image"
+              />
             </figure>
-            <h1>
-              Dónde las transferencias de dinero se convierten en algo
-              divertido
-            </h1>
+            <h3>Descargá la app</h3>
+            <p>Registrate gratis usando tu email y número de teléfono.</p>
           </article>
-        </div>
-      </div>
-      <div class="col-12 col-lg-6">
-        <figure class="heroImg-container d-flex justify-content-center">
-          <img class="img-fluid" src="./images/imgHero.png" alt="Imagen principal" />
-        </figure>
-      </div>
-    </div>
-  </section>
 
-  <!--MEET BORDER-->
-  <section class="meetBorder container-fluid" id="meetBorder">
-    <div class="container-fluid meetBorder__container">
-      <div class="row gap-5 d-flex justify-content-center">
-        <h2 class="row">
-          Conocé todo lo que necesitás para empezar a bordear
-        </h2>
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-6">
-            <article class="row justify-content-center">
-              <figure class="d-flex justify-content-center shippingImgContainer">
-                <img class="img-fluid" src="./images/shipping.svg" alt="shipping logo" />
-              </figure>
-              <h3 class="d-flex justify-content-center">
-                Envía dinero a tus amigas y familiares
-              </h3>
-              <p class="text-center text-md-start">
-                Con Border puedes transferir el monto que quieras, en la
-                moneda que quieras y desde donde quieras.
-              </p>
-            </article>
-          </div>
-          <div class="col-12 col-md-6">
-            <article class="row justify-content-center">
-              <figure class="d-flex justify-content-center startsImgContainer">
-                <img src="./images/stars.svg" alt="starts logo" />
-              </figure>
-              <h3 class="d-flex justify-content-center">Divide los costos</h3>
-              <p class="text-center text-md-start">
-                Compartis cuentas de streaming como Netflix o Spotify con
-                familiares o amigas? Con Border puedes dividir los costos
-                entre todas por mas que vivan en otro país.
-              </p>
-            </article>
-          </div>
+          <article class="cardsToSend__description">
+            <figure class="d-flex justify-content-center">
+              <img
+                class="img-fluid"
+                src="./images/toSend-2.svg"
+                alt="how to add money to your account image"
+              />
+            </figure>
+            <h3>Agrega dinero a tu cuenta</h3>
+            <p>
+              Puedes usar tarjetas de débito o crédito, billeteras virtuales o
+              hacer transferencias desde tu banco.
+            </p>
+          </article>
+
+          <article class="cardsToSend__description">
+            <figure
+              class="d-flex justify-content-center row align-items-center"
+            >
+              <img
+                class="img-fluid"
+                src="./images/toSend-3.svg"
+                alt="are you ready to border image"
+              />
+            </figure>
+            <h3>¡Estás listo para Bordear!</h3>
+            <p>
+              Decide a quién le quieres enviar dinero, agrega su email y número
+              de teléfono, y listo!
+            </p>
+          </article>
         </div>
         <!-- Force next columns to break to new line at md breakpoint and up -->
         <div class="w-100 d-none d-md-block"></div>
 
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-6">
-            <article class="row justify-content-center">
-              <figure class="d-flex justify-content-center heartImgContainer">
-                <img class="img-fluid" src="./images/hearts.svg" alt="hearts logo" />
-              </figure>
-              <h3 class="d-flex justify-content-center">
-                Comparte los buenos momentos
-              </h3>
-              <p class="text-center text-md-start">
-                Con Border puedes saldar cuentas con tus amigas para cualquier
-                actividad - desde viajes hasta bodas destino en donde todas se
-                reúnen en un mismo lugar.
-              </p>
-            </article>
-          </div>
-          <div class="col-12 col-md-6">
-            <article class="row justify-content-center">
-              <figure class="d-flex justify-content-center giftImgContainer">
-                <img src="./images/gift.svg" alt="gift logo" />
-              </figure>
-              <h3 class="d-flex justify-content-center">
-                Sorprende regalando
-              </h3>
-              <p class="text-center text-md-start">
-                Con Border puedes enviar regalos para cualquier ocasión, desde
-                celebraciones de cumpleaños hasta festejos de graduación.
-              </p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--HOW TO BORDEAR-->
-  <section class="howToBorder container-fluid" id="howToBorder">
-    <div class="row d-flex justify-content-center gap-5">
-      <h2 class="text-center">Cómo bordear</h2>
-      <ul class="options d-flex justify-content-center gap-5">
-        <li>
-          <a id="toSendAnchor" class="options__item" href="javascript:void(0)" onclick="toSend()">
-            Cuando enviás
-          </a>
-        </li>
-        <li>
-          <a id="toReceiveAnchor" class="options__item options__item--toReceive" href="javascript:void(0)"
-            onclick="toReceive()">Cuando recibís</a>
-        </li>
-      </ul>
-
-      <!--To Send Section-->
-      <div class="cardsToSend displayVisible" id="toSend">
-        <article class="cardsToSend__description">
-          <figure class="d-flex justify-content-center">
-            <img class="img-fluid" src="./images/toSend-1.svg" alt="download app image" />
-          </figure>
-          <h3>Descargá la app</h3>
-          <p>Registrate gratis usando tu email y número de teléfono.</p>
-        </article>
-
-        <article class="cardsToSend__description">
-          <figure class="d-flex justify-content-center">
-            <img class="img-fluid" src="./images/toSend-2.svg" alt="how to add money to your account image" />
-          </figure>
-          <h3>Agrega dinero a tu cuenta</h3>
-          <p>
-            Puedes usar tarjetas de débito o crédito, billeteras virtuales o
-            hacer transferencias desde tu banco.
-          </p>
-        </article>
-
-        <article class="cardsToSend__description">
-          <figure class="d-flex justify-content-center row align-items-center">
-            <img class="img-fluid" src="./images/toSend-3.svg" alt="are you ready to border image" />
-          </figure>
-          <h3>¡Estás listo para Bordear!</h3>
-          <p>
-            Decide a quién le quieres enviar dinero, agrega su email y número
-            de teléfono, y listo!
-          </p>
-        </article>
-      </div>
-      <!-- Force next columns to break to new line at md breakpoint and up -->
-      <div class="w-100 d-none d-md-block"></div>
-
-      <!--To Receive Section-->
-      <div class="cardsToReceive" id="toReceive">
-        <article class="cardsToReceive__description">
-          <figure class="d-flex justify-content-center">
-            <img class="img-fluid" src="./images/toReceive-1.svg" alt="download app image" />
-          </figure>
-          <h3>Recibe la confirmación por email</h3>
-          <p>
-            Cada vez que recibes una transferencia, te confirmaremos el total
-            y la persona que envía mediante un email.
-          </p>
-        </article>
-
-        <article class="cardsToReceive__description">
-          <figure class="d-flex justify-content-center">
-            <img class="img-fluid" src="./images/toReceive-2.svg" alt="how to add money to your account image" />
-          </figure>
-          <h3>Descarga o entra a la App</h3>
-          <p>
-            Si ya la tienes descargada, puedes entrar en la App para ver la
-            transferencia. Si no la descargaste todavía, en el mensaje de
-            texto tendrás el link para poder bajarla desde tu mobile store.
-          </p>
-        </article>
-
-        <article class="cardsToReceive__description">
-          <figure class="d-flex justify-content-center">
-            <img class="img-fluid" src="./images/toReceive-3.svg" alt="are you ready to border image" />
-          </figure>
-          <h3>¡Felicidades, eres parte de Border!</h3>
-          <p>
-            Una vez que confirmes la transferencia podrás usar el dinero para
-            lo que quieras.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!--ABOUT US-->
-  <section class="aboutUs container-fluid" id="aboutUs">
-    <div class="container-fluid aboutUs__container">
-      <h2 class="text-center">Sobre nosotros</h2>
-      <div class="row gap-5">
-        <div class="container d-flex flex-wrap-reverse align-items-center">
-          <figure class="col-12 col-md-6 swipingLeft-container" id="leftImg">
-            <img class="img-fluid" src="./images/aboutUs-1.svg" alt="boys meeting border logo" />
-          </figure>
-          <article class="col-12 col-md-6">
-            <h3 class="text-center text-md-start">¿Quiénes somos?</h3>
-            <p class="text-center text-md-start">
-              Border es una plataforma para transferir dinero
-              internacionalmente de manera social y divertida.
+        <!--To Receive Section-->
+        <div class="cardsToReceive" id="toReceive">
+          <article class="cardsToReceive__description">
+            <figure class="d-flex justify-content-center">
+              <img
+                class="img-fluid"
+                src="./images/toReceive-1.svg"
+                alt="download app image"
+              />
+            </figure>
+            <h3>Recibe la confirmación por email</h3>
+            <p>
+              Cada vez que recibes una transferencia, te confirmaremos el total
+              y la persona que envía mediante un email.
             </p>
           </article>
-        </div>
 
-        <!-- Force next columns to break to new line at md breakpoint and up -->
-        <div class="w-100 d-none d-md-block"></div>
+          <article class="cardsToReceive__description">
+            <figure class="d-flex justify-content-center">
+              <img
+                class="img-fluid"
+                src="./images/toReceive-2.svg"
+                alt="how to add money to your account image"
+              />
+            </figure>
+            <h3>Descarga o entra a la App</h3>
+            <p>
+              Si ya la tienes descargada, puedes entrar en la App para ver la
+              transferencia. Si no la descargaste todavía, en el mensaje de
+              texto tendrás el link para poder bajarla desde tu mobile store.
+            </p>
+          </article>
 
-        <div class="container d-flex flex-row-reverse align-items-center flex-wrap-reverse">
-          <figure class="col-12 col-md-6 swipingRight-container" id="righttImg">
-            <img class="img-fluid" src="./images/aboutUs-2.svg" alt="Image of people connecting with each other" />
-          </figure>
-          <article class="col-12 col-md-6">
-            <h3 class="text-center text-md-start">¿Cómo surgió Border?</h3>
-            <p class="text-center text-md-start">
-              Hoy en día vivimos en un mundo súper conectado, en donde mandar
-              emails, hacer videollamadas y chatear con personas que están en
-              otros países ocurre casi de manera automática. La idea de Border
-              es poder crear esta misma interacción a través de transferencias
-              de dinero, en donde amigas o familiares puedan enviar dinero
-              para cualquier ocasión, ya sea para un regalo o para compartir
-              momentos especiales como un viaje o una boda.
+          <article class="cardsToReceive__description">
+            <figure class="d-flex justify-content-center">
+              <img
+                class="img-fluid"
+                src="./images/toReceive-3.svg"
+                alt="are you ready to border image"
+              />
+            </figure>
+            <h3>¡Felicidades, eres parte de Border!</h3>
+            <p>
+              Una vez que confirmes la transferencia podrás usar el dinero para
+              lo que quieras.
             </p>
           </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!--OUR TEAM-->
-  <!--<section class="ourTeam container-fluid row" id="ourTeam">
+    <!--ABOUT US-->
+    <section class="aboutUs container-fluid" id="aboutUs">
+      <div class="container-fluid aboutUs__container">
+        <h2 class="text-center">Sobre nosotros</h2>
+        <div class="row gap-5">
+          <div class="container d-flex flex-wrap-reverse align-items-center">
+            <figure class="col-12 col-md-6 swipingLeft-container" id="leftImg">
+              <img
+                class="img-fluid"
+                src="./images/aboutUs-1.svg"
+                alt="boys meeting border logo"
+              />
+            </figure>
+            <article class="col-12 col-md-6">
+              <h3 class="text-center text-md-start">¿Quiénes somos?</h3>
+              <p class="text-center text-md-start">
+                Border es una plataforma para transferir dinero
+                internacionalmente de manera social y divertida.
+              </p>
+            </article>
+          </div>
+
+          <!-- Force next columns to break to new line at md breakpoint and up -->
+          <div class="w-100 d-none d-md-block"></div>
+
+          <div
+            class="container d-flex flex-row-reverse align-items-center flex-wrap-reverse"
+          >
+            <figure
+              class="col-12 col-md-6 swipingRight-container"
+              id="righttImg"
+            >
+              <img
+                class="img-fluid"
+                src="./images/aboutUs-2.svg"
+                alt="Image of people connecting with each other"
+              />
+            </figure>
+            <article class="col-12 col-md-6">
+              <h3 class="text-center text-md-start">¿Cómo surgió Border?</h3>
+              <p class="text-center text-md-start">
+                Hoy en día vivimos en un mundo súper conectado, en donde mandar
+                emails, hacer videollamadas y chatear con personas que están en
+                otros países ocurre casi de manera automática. La idea de Border
+                es poder crear esta misma interacción a través de transferencias
+                de dinero, en donde amigas o familiares puedan enviar dinero
+                para cualquier ocasión, ya sea para un regalo o para compartir
+                momentos especiales como un viaje o una boda.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--OUR TEAM-->
+    <!--<section class="ourTeam container-fluid row" id="ourTeam">
       <div class="containerText">
         <h3>Our team</h3>
         <p>
@@ -300,7 +385,7 @@
         </div>
         <button class="btn-form-equipo" type="submit">Send</button>
       </form>-->
-  <!--<div class="col-12 container-fluid d-grid gap-3 container-box">
+    <!--<div class="col-12 container-fluid d-grid gap-3 container-box">
         <article class="ourTeam__description">
           <h2 class="text-center">Nuestro equipo</h2>
           <p class="text-center">
@@ -317,38 +402,60 @@
         </form>
       </div>
     </section>-->
-    
-  <!--DOWNLOAD BORDER-->
-  <section class="downloadBorder container-fluid" id="downloadBorder">
-    <div class="downloadBorder__container container-fluid d-flex flex-wrap flex-md-nowrap align-items-center justify-content-center gap-5 gap-md-0">
-      <article class="description col-12 col-md-6">
-        <h3 class="my-0 px-0 text-start">Descargá Border en tu celular</h3>
-        <p class="col-11 col-sm-8 col-md-10 col-lg-9 my-0 px-0">Unete a la lista de espera para empezar a bordear 
-          lo antes posible!</p>
-        <button class="col-7 col-sm-5 col-md-6 col-lg-5 col-xxl-4">Coming soon</button>
-      </article>
-      <figure class="col-12 col-md-6">
-        <img class="img-fluid d-flex justify-content-center mx-auto" src="./images/mockupDownloadApp.webp" alt="app view">
-      </figure>
-    </div>
-  </section>
 
+    <!--DOWNLOAD BORDER-->
+    <section class="downloadBorder container-fluid" id="downloadBorder">
+      <div
+        class="downloadBorder__container container-fluid d-flex flex-wrap flex-md-nowrap align-items-center justify-content-center gap-5 gap-md-0"
+      >
+        <article class="description col-12 col-md-6">
+          <h3 class="my-0 px-0 text-start">Descargá Border en tu celular</h3>
+          <p class="col-11 col-sm-8 col-md-10 col-lg-9 my-0 px-0">
+            Unete a la lista de espera para empezar a bordear lo antes posible!
+          </p>
+          <button class="col-7 col-sm-5 col-md-6 col-lg-5 col-xxl-4">
+            Coming soon
+          </button>
+        </article>
+        <figure class="col-12 col-md-6">
+          <img
+            class="img-fluid d-flex justify-content-center mx-auto"
+            src="./images/mockupDownloadApp.webp"
+            alt="app view"
+          />
+        </figure>
+      </div>
+    </section>
 
-  <!--CONTACT US-->
-  <section class="container contact" id="contact">
-    <h2>Contact us</h2>
-    <p class="subtitle">
-      Do you want to talk to us? We are here to help you.
-    </p>
+    <!--CONTACT US-->
+    <section class="container contact" id="contact">
+      <h2>Contact us</h2>
+      <p class="subtitle">
+        Do you want to talk to us? We are here to help you.
+      </p>
 
-    <form action="forms/sendmail.php" method="post" role="form" class="row justify-content-center formulario"
-      id="formulario">
-      
+      <form
+        action="forms/sendmail.php"
+        method="post"
+        role="form"
+        class="row justify-content-center formulario"
+        id="formulario"
+      >
         <!--Grupo: Nombre-->
-        <div class="col-12 col-md-7 text-center formulario__grupo" id="grupo__name">
+        <div
+          class="col-12 col-md-7 text-center formulario__grupo"
+          id="grupo__name"
+        >
           <label for="name" class="formulario__label">First Name</label>
           <div class="formulario__grupo-input">
-            <input type="text" class="formulario__input" name="name" id="name" placeholder="First Name" required />
+            <input
+              type="text"
+              class="formulario__input"
+              name="name"
+              id="name"
+              placeholder="First Name"
+              required
+            />
           </div>
           <p class="formulario__input-error">
             El nombre tiene que ser de 4 a 16 digitos y solo debe contener
@@ -357,10 +464,20 @@
         </div>
 
         <!--Grupo: Apellido-->
-        <div class="col-12 col-md-7 text-center formulario__grupo" id="grupo__surname">
+        <div
+          class="col-12 col-md-7 text-center formulario__grupo"
+          id="grupo__surname"
+        >
           <label for="surname" class="formulario__label">Last Name</label>
           <div class="formulario__grupo-input">
-            <input type="text" class="formulario__input" name="surname" id="surname" placeholder="Last Name" required />
+            <input
+              type="text"
+              class="formulario__input"
+              name="surname"
+              id="surname"
+              placeholder="Last Name"
+              required
+            />
           </div>
           <p class="formulario__input-error">
             El apellido tiene que ser de 4 a 16 digitos y solo debe contener
@@ -368,87 +485,184 @@
           </p>
         </div>
 
-
-      <!--Grupo: Email-->
-      <div class="col-12 col-md-7 text-center formulario__grupo" id="grupo__email">
-        <label for="email" class="formulario__label">Email</label>
-        <div class="formulario__grupo-input">
-          <input type="email" class="formulario__input" name="email" id="email" placeholder="Email" required />
+        <!--Grupo: Email-->
+        <div
+          class="col-12 col-md-7 text-center formulario__grupo"
+          id="grupo__email"
+        >
+          <label for="email" class="formulario__label">Email</label>
+          <div class="formulario__grupo-input">
+            <input
+              type="email"
+              class="formulario__input"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <p class="formulario__input-error">
+            El correo solo puede contener letras, numeros, puntos, guiones y
+            guiones bajos.
+          </p>
         </div>
-        <p class="formulario__input-error">
-          El correo solo puede contener letras, numeros, puntos, guiones y
-          guiones bajos.
-        </p>
-      </div>
 
-      <!--Grupo: Telefono-->
-      <div class="col-12 col-md-7 text-center formulario__grupo" id="grupo__celphone">
-        <label for="celphone" class="formulario__label">Phone number</label>
-        <div class="formulario__grupo-input">
-          <input type="number" class="formulario__input" name="celphone" id="celphone" placeholder="Phone number"
-            required />
+        <!--Grupo: Telefono-->
+        <div
+          class="col-12 col-md-7 text-center formulario__grupo"
+          id="grupo__celphone"
+        >
+          <label for="celphone" class="formulario__label">Phone number</label>
+          <div class="formulario__grupo-input">
+            <input
+              type="number"
+              class="formulario__input"
+              name="celphone"
+              id="celphone"
+              placeholder="Phone number"
+              required
+            />
+          </div>
+          <p class="formulario__input-error">
+            El teléfono solo puede contener numeros y el maximo son 14 digitos.
+          </p>
         </div>
-        <p class="formulario__input-error">
-          El teléfono solo puede contener numeros y el maximo son 14 digitos.
-        </p>
-      </div>
 
-      <!--Grupo: Pais-->
-      <div class="col-12 col-md-7 text-center formulario__grupo" id="grupo__country">
-        <label for="country" class="formulario__label">Country where you live</label>
-        <div class="formulario__grupo-input">
-          <input type="text" class="formulario__input" name="country" id="country" placeholder="Country where you live"
-            required />
+        <!--Grupo: Pais-->
+        <div
+          class="col-12 col-md-7 text-center formulario__grupo"
+          id="grupo__country"
+        >
+          <label for="country" class="formulario__label"
+            >Country where you live</label
+          >
+          <div class="formulario__grupo-input">
+            <input
+              type="text"
+              class="formulario__input"
+              name="country"
+              id="country"
+              placeholder="Country where you live"
+              required
+            />
+          </div>
+          <p class="formulario__input-error">Error pais.</p>
         </div>
-        <p class="formulario__input-error">Error pais.</p>
-      </div>
 
-      <!--Grupo: Nacionalidad-->
-      <div class="col-12 col-md-7 text-center formulario__grupo" id="grupo__nationality">
-        <label for="nationality" class="formulario__label">Nationality</label>
-        <div class="formulario__grupo-input">
-          <input type="text" class="formulario__input" name="nationality" id="nationality" placeholder="Nationality"
-            required />
+        <!--Grupo: Nacionalidad-->
+        <div
+          class="col-12 col-md-7 text-center formulario__grupo"
+          id="grupo__nationality"
+        >
+          <label for="nationality" class="formulario__label">Nationality</label>
+          <div class="formulario__grupo-input">
+            <input
+              type="text"
+              class="formulario__input"
+              name="nationality"
+              id="nationality"
+              placeholder="Nationality"
+              required
+            />
+          </div>
+          <p class="formulario__input-error">Error Nacionalidad.</p>
         </div>
-        <p class="formulario__input-error">Error Nacionalidad.</p>
-      </div>
 
-      <!--Grupo: Mensaje-->
-      <div class="col-12 col-md-7 text-center formulario__grupo" id="grupo__message">
-        <label for="message" class="formulario__label">Message</label>
-        <div class="formulario__grupo-input">
-          <!--<input type="text" class="form__input" name="message" id="message" placeholder="Mensaje">-->
-          <textarea type="text" class="formulario__textarea" name="message" id="message" cols="50" rows="10"
-            placeholder="" required></textarea>
+        <!--Grupo: Mensaje-->
+        <div
+          class="col-12 col-md-7 text-center formulario__grupo"
+          id="grupo__message"
+        >
+          <label for="message" class="formulario__label">Message</label>
+          <div class="formulario__grupo-input">
+            <!--<input type="text" class="form__input" name="message" id="message" placeholder="Mensaje">-->
+            <textarea
+              type="text"
+              class="formulario__textarea"
+              name="message"
+              id="message"
+              cols="50"
+              rows="10"
+              placeholder=""
+              required
+            ></textarea>
+          </div>
+          <p class="formulario__input-error">Error Mensaje.</p>
         </div>
-        <p class="formulario__input-error">Error Mensaje.</p>
-      </div>
 
-      <!--Grupo: Terminos y condiciones-->
-      <!-- <div class="formulario__grupo" id="formulario__terminos">
+        <!--Grupo: Terminos y condiciones-->
+        <!-- <div class="formulario__grupo" id="formulario__terminos">
           <label class="formulario__label">
             <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos" required>
             Acepto los Terminos y Condiciones
           </label>
         </div> -->
 
-      <div class="formulario__mensaje" id="alert-error">
-        <p>
-          <i class="fa-solid fa-triangle-exclamation"></i><b>Error: </b>Please
-          try again.
-        </p>
-      </div>
-      <div class="formulario__mensaje" id="alert-success">
-        <p>Form sent successfully!</p>
-      </div>
+        <div class="formulario__mensaje" id="alert-error">
+          <p>
+            <i class="fa-solid fa-triangle-exclamation"></i><b>Error: </b>Please
+            try again.
+          </p>
+        </div>
+        <div class="formulario__mensaje" id="alert-success">
+          <p>Form sent successfully!</p>
+        </div>
 
-      <div class="formulario__grupo formulario__grupo-btn-enviar">
-        <button type="submit" class="formulario__btn">Send</button>
-      </div>
-    </form>
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+          <button type="submit" class="formulario__btn">Send</button>
+        </div>
+      </form>
+    </section>
 
+    <!--FOOTER-->
+    <footer class="footer container-fluid d-grid gap-5" id="footer">
+      <section
+        class="footer-top row d-sm-flex flex-md-nowrap justify-content-sm-between justify-content-xl-evenly align-items-center gap-5"
+      >
+        <a class="footer-top__link col-sm-3 col-md-2 text-center" href="#home">
+          <figure>
+            <img
+              class="footer-logo"
+              src="./images/borderLogoFooter.svg"
+              alt=""
+            />
+          </figure>
+        </a>
+        <ul class="options text-center col-sm-6 col-lg-7 text-sm-start gap-sm-4 d-sm-flex d-grid gap-2 justify-content-sm-end justify-content-md-around justify-content-lg-center">
+          <div class="options__right d-grid d-lg-flex gap-2 gap-lg-5 align-items-lg-center">
+            <li class="options__items">
+              <a class="options__link" href="#home"> Home </a>
+            </li>
+            <li class="options__items">
+              <a class="options__link" href="#solutions"> Solutions </a>
+            </li>
+            <li class="options__items">
+              <a class="options__link" href="#howStart"> How to start </a>
+            </li>
+          </div>
+          <div class="options__left d-grid d-lg-flex gap-2 gap-lg-5 align-items-lg-center">
+            <li class="options__items">
+              <a class="options__link" href="#aboutUs"> About us </a>
+            </li>
+            <li class="options__items">
+              <a class="options__link" href="#contact"> Contact </a>
+            </li>
+          </div>
+        </ul>
+        <div class="footer-top__redes col-md-2 d-flex justify-content-center gap-5">
+          <a class="footer-top__redes--link" href="">
+            <img src="./images/twitter.svg" alt="" />
+          </a>
+          <a class="footer-top__redes--link" href="">
+            <img src="./images/linkedin.svg" alt="" />
+          </a>
+        </div>
+      </section>
+      <div class="footer-bottom text-center">
+        <p>Border 2022</p>
+      </div>
+    </footer>
 
     <script src="./js/bootstrap.bundle.js"></script>
-</body>
-
+  </body>
 </html>

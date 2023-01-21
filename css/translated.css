@@ -212,6 +212,31 @@ header {
       header .navbar-toggle {
         display: block !important; } }
 
+.footer {
+  padding: 8rem;
+  max-width: 1200px; }
+  .footer-top {
+    padding-top: 3rem;
+    border-top: 1px solid #b2c13680; }
+    .footer-top .options__link {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.6em;
+      line-height: 24px;
+      letter-spacing: -0.015em;
+      color: #000000; }
+    .footer-top .options__left {
+      height: 5.3rem; }
+  .footer-bottom {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(1.4rem, calc(1.45vw + 0.26rem), 1.8rem);
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: #010101; }
+
 /* PAGES */
 .banner {
   padding: 12rem 5rem 3.2rem;
@@ -310,7 +335,7 @@ header {
 
 .downloadBorder {
   padding: 8rem 5rem;
-  background-color: rgba(178, 193, 54, 0.1);
+  background-color: #b2c1361a;
   width: 100%; }
   .downloadBorder__container {
     max-width: 1200px; }
@@ -345,7 +370,7 @@ header {
 
 .aboutUs {
   padding: 8rem 5rem;
-  background-color: rgba(178, 193, 54, 0.1);
+  background-color: #b2c1361a;
   width: 100%; }
   .aboutUs__container {
     display: flex;
@@ -584,7 +609,7 @@ header {
 
 .meetBorder {
   padding: 8rem 5rem;
-  background-color: rgba(178, 193, 54, 0.1); }
+  background-color: #b2c1361a; }
   .meetBorder__container {
     position: relative;
     width: 100%;
