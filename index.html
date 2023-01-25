@@ -43,24 +43,24 @@
         </a>
         <ul class="menu menu_visible">
           <li class="menu__items">
-            <a class="menu__link" href="#meetBorder"> Solutions </a>
+            <a class="menu__link" href="#meetBorder"> Soluciones </a>
           </li>
           <li class="menu__items">
-            <a class="menu__link" href="#howToBorder"> How to start </a>
+            <a class="menu__link" href="#howToBorder"> Cómo empezar </a>
           </li>
           <li class="menu__items">
-            <a class="menu__link" href="#aboutUs"> About us </a>
+            <a class="menu__link" href="#aboutUs"> Nosotros </a>
           </li>
           <li class="menu__items">
-            <a class="menu__link" href="#contact"> Contact </a>
+            <a class="menu__link" href="#contact"> Contacto </a>
           </li>
-          <li class="menu__items">
+          <!--<li class="menu__items">
             <a> Es <i class="fa-solid fa-play"></i> </a>
-            <!--<ul>
-                    <li><a class="menu__link"> Es </a></li>
-                    <li><a class="menu__link"> Eng </a></li>
-                  </ul>-->
-          </li>
+            <ul>
+              <li><a class="menu__link"> Es </a></li>
+              <li><a class="menu__link"> Eng </a></li>
+            </ul>
+          </li>-->
         </ul>
         <button class="navbar-toggle">
           <i class="fas fa-bars"></i>
@@ -370,22 +370,8 @@
     </section>
 
     <!--OUR TEAM-->
-    <!--<section class="ourTeam container-fluid row" id="ourTeam">
-      <div class="containerText">
-        <h3>Our team</h3>
-        <p>
-          We are always looking for new people who share our vision and
-          enthusiasm to keep Border growing.
-        </p>
-      </div>
-      <form class="inputBox" id="formulario-equipo">
-        <div class="form">
-          <input type="email" required="required" name="email" />
-          <span class="text">Enter your email</span>
-        </div>
-        <button class="btn-form-equipo" type="submit">Send</button>
-      </form>-->
-    <!--<div class="col-12 container-fluid d-grid gap-3 container-box">
+    <section class="ourTeam container-fluid row" id="ourTeam">
+      <div class="col-12 container-fluid d-grid gap-3 container-box">
         <article class="ourTeam__description">
           <h2 class="text-center">Nuestro equipo</h2>
           <p class="text-center">
@@ -393,15 +379,51 @@
             visión y entusiasmo para lograr que Border siga creciendo.
           </p>
         </article>
-        <form class="inputBox col-9 container-fluid justify-content-center" id="formulario-equipo">
-          <div class="form">
-            <input type="email" required="required" name="email" />
-            <span class="text">Enter your email</span>
+        <form
+          class="form col-9 container-fluid justify-content-center"
+          id="form-equipo"
+        >
+          <!--Grupo: Email-->
+          <div class="form__grupo" id="grupo__email">
+            <div class="form__grupo-input">
+              <input
+                type="email"
+                class="form__input"
+                name="email"
+                id="email"
+                placeholder="Ingresá tu e-mail"
+                required
+              />
+              <i class="form__validacion-estado fas fa-times-circle"></i>
+              <div class="form__grupo form__grupo-btn-enviar">
+                <button type="submit" class="form__btn">Enviar</button>
+                <p class="form__mensaje-exito" id="form__mensaje-exito">
+                  Formulario enviado correctamente!
+                </p>
+              </div>
+            </div>
+            <p class="form__input-error">
+              El correo solo puede contener letras, numeros, puntos, guiones y
+              guiones bajos.
+            </p>
           </div>
-          <button class="btn-form-equipo" type="submit">Send</button>
+
+          <div class="form__mensaje" id="form__mensaje">
+            <p>
+              <i class="fas fa-exclamation-triangle"></i><b>Error:</b> Por favor
+              rellena el formulario correctamente.
+            </p>
+          </div>
+
+          <!--<div class="form__grupo form__grupo-btn-enviar">
+            <button type="submit" class="form__btn">Enviar</button>
+            <p class="form__mensaje-exito" id="form__mensaje-exito">
+              Formulario enviado correctamente!
+            </p>
+          </div>-->
         </form>
       </div>
-    </section>-->
+    </section>
 
     <!--DOWNLOAD BORDER-->
     <section class="downloadBorder container-fluid" id="downloadBorder">
@@ -429,9 +451,9 @@
 
     <!--CONTACT US-->
     <section class="container contact" id="contact">
-      <h2>Contact us</h2>
+      <h2>Contacto</h2>
       <p class="subtitle">
-        Do you want to talk to us? We are here to help you.
+        ¿Te quieres comunicar con nosotros? Estamos aquí para ayudarte.
       </p>
 
       <form
@@ -446,14 +468,14 @@
           class="col-12 col-md-7 text-center formulario__grupo"
           id="grupo__name"
         >
-          <label for="name" class="formulario__label">First Name</label>
+          <label for="name" class="formulario__label">Nombre</label>
           <div class="formulario__grupo-input">
             <input
               type="text"
               class="formulario__input"
               name="name"
               id="name"
-              placeholder="First Name"
+              placeholder="Nombre"
               required
             />
           </div>
@@ -468,14 +490,14 @@
           class="col-12 col-md-7 text-center formulario__grupo"
           id="grupo__surname"
         >
-          <label for="surname" class="formulario__label">Last Name</label>
+          <label for="surname" class="formulario__label">Apellido</label>
           <div class="formulario__grupo-input">
             <input
               type="text"
               class="formulario__input"
               name="surname"
               id="surname"
-              placeholder="Last Name"
+              placeholder="Apellido"
               required
             />
           </div>
@@ -490,14 +512,16 @@
           class="col-12 col-md-7 text-center formulario__grupo"
           id="grupo__email"
         >
-          <label for="email" class="formulario__label">Email</label>
+          <label for="email" class="formulario__label"
+            >Correo electrónico</label
+          >
           <div class="formulario__grupo-input">
             <input
               type="email"
               class="formulario__input"
               name="email"
               id="email"
-              placeholder="Email"
+              placeholder="Correo electrónico"
               required
             />
           </div>
@@ -512,14 +536,14 @@
           class="col-12 col-md-7 text-center formulario__grupo"
           id="grupo__celphone"
         >
-          <label for="celphone" class="formulario__label">Phone number</label>
+          <label for="celphone" class="formulario__label">Teléfono</label>
           <div class="formulario__grupo-input">
             <input
               type="number"
               class="formulario__input"
               name="celphone"
               id="celphone"
-              placeholder="Phone number"
+              placeholder="Teléfono"
               required
             />
           </div>
@@ -533,16 +557,14 @@
           class="col-12 col-md-7 text-center formulario__grupo"
           id="grupo__country"
         >
-          <label for="country" class="formulario__label"
-            >Country where you live</label
-          >
+          <label for="country" class="formulario__label">País</label>
           <div class="formulario__grupo-input">
             <input
               type="text"
               class="formulario__input"
               name="country"
               id="country"
-              placeholder="Country where you live"
+              placeholder="País"
               required
             />
           </div>
@@ -554,14 +576,16 @@
           class="col-12 col-md-7 text-center formulario__grupo"
           id="grupo__nationality"
         >
-          <label for="nationality" class="formulario__label">Nationality</label>
+          <label for="nationality" class="formulario__label"
+            >Nacionalidad</label
+          >
           <div class="formulario__grupo-input">
             <input
               type="text"
               class="formulario__input"
               name="nationality"
               id="nationality"
-              placeholder="Nationality"
+              placeholder="Nacionalidad"
               required
             />
           </div>
@@ -573,7 +597,7 @@
           class="col-12 col-md-7 text-center formulario__grupo"
           id="grupo__message"
         >
-          <label for="message" class="formulario__label">Message</label>
+          <label for="message" class="formulario__label">Mensaje</label>
           <div class="formulario__grupo-input">
             <!--<input type="text" class="form__input" name="message" id="message" placeholder="Mensaje">-->
             <textarea
@@ -609,7 +633,7 @@
         </div>
 
         <div class="formulario__grupo formulario__grupo-btn-enviar">
-          <button type="submit" class="formulario__btn">Send</button>
+          <button type="submit" class="formulario__btn">Enviar</button>
         </div>
       </form>
     </section>
@@ -628,29 +652,40 @@
             />
           </figure>
         </a>
-        <ul class="options text-center col-sm-6 col-lg-7 text-sm-start gap-sm-4 d-sm-flex d-grid gap-2 justify-content-sm-end justify-content-md-around justify-content-lg-center">
-          <div class="options__right d-grid d-lg-flex gap-2 gap-lg-5 align-items-lg-center">
+        <ul
+          class="options text-center col-sm-6 col-lg-7 text-sm-start gap-sm-4 gap-lg-5 d-sm-flex d-grid gap-2 justify-content-sm-end justify-content-md-around justify-content-lg-center"
+        >
+          <div
+            class="options__right d-grid d-lg-flex gap-2 gap-lg-5 align-items-lg-center"
+          >
             <li class="options__items">
               <a class="options__link" href="#home"> Home </a>
             </li>
             <li class="options__items">
-              <a class="options__link" href="#solutions"> Solutions </a>
+              <a class="options__link" href="#solutions"> Soluciones </a>
             </li>
             <li class="options__items">
-              <a class="options__link" href="#howStart"> How to start </a>
+              <a class="options__link" href="#howStart"> Cómo empezar </a>
             </li>
           </div>
-          <div class="options__left d-grid d-lg-flex gap-2 gap-lg-5 align-items-lg-center">
+          <div
+            class="options__left d-grid d-lg-flex gap-2 gap-lg-5 align-items-lg-center"
+          >
             <li class="options__items">
-              <a class="options__link" href="#aboutUs"> About us </a>
+              <a class="options__link" href="#aboutUs"> Nosotros </a>
             </li>
             <li class="options__items">
-              <a class="options__link" href="#contact"> Contact </a>
+              <a class="options__link" href="#contact"> Contacto </a>
             </li>
           </div>
         </ul>
-        <div class="footer-top__redes col-md-2 d-flex justify-content-center gap-5">
-          <a class="footer-top__redes--link" href="">
+        <div
+          class="footer-top__redes col-md-2 d-flex justify-content-center gap-5"
+        >
+          <a
+            class="footer-top__redes--link"
+            href="https://twitter.com/Bordertransfer"
+          >
             <img src="./images/twitter.svg" alt="" />
           </a>
           <a class="footer-top__redes--link" href="">
@@ -659,7 +694,7 @@
         </div>
       </section>
       <div class="footer-bottom text-center">
-        <p>Border 2022</p>
+        <p>Border 2023</p>
       </div>
     </footer>
 
