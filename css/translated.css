@@ -140,7 +140,6 @@ h1 {
   font-style: normal;
   font-weight: 700;
   font-size: clamp(2.3rem, calc(3.8vw + 0.17rem), 3.8rem);
-  line-height: 46px;
   letter-spacing: -0.02em;
   color: #010101; }
 
@@ -194,7 +193,7 @@ header {
   box-shadow: 0 0 7px #7b7b7b;
   position: fixed;
   z-index: 999;
-  background: #ffffff; }
+  background: #fffbda; }
   header .navbar {
     display: flex;
     align-items: center;
@@ -224,7 +223,7 @@ header {
       header .navbar .menu {
         flex-direction: column;
         align-items: flex-start;
-        background: #ffffff;
+        background: #fffbda;
         position: fixed;
         top: 86px;
         width: 100%;
@@ -233,7 +232,7 @@ header {
         gap: 1rem;
         height: auto;
         overflow-y: auto;
-        right: -62%;
+        right: -65%;
         transition: right 0.3s;
         z-index: 10; }
         header .navbar .menu_visible {
@@ -620,7 +619,7 @@ header {
       line-height: 24px;
       letter-spacing: -0.015em;
       color: rgba(0, 0, 0, 0.8);
-      max-width: 60rem; }
+      max-width: 50rem; }
 
 /*----OUR TEAM----*/
 .ourTeam {
