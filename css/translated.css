@@ -194,7 +194,7 @@ header {
   box-shadow: 0 0 7px #7b7b7b;
   position: fixed;
   z-index: 999;
-  background: #fffbda; }
+  background: #ffffff; }
   header .navbar {
     display: flex;
     align-items: center;
@@ -224,7 +224,7 @@ header {
       header .navbar .menu {
         flex-direction: column;
         align-items: flex-start;
-        background: #fffbda;
+        background: #ffffff;
         position: fixed;
         top: 86px;
         width: 100%;
@@ -233,7 +233,7 @@ header {
         gap: 1rem;
         height: auto;
         overflow-y: auto;
-        right: -65%;
+        right: -62%;
         transition: right 0.3s;
         z-index: 10; }
         header .navbar .menu_visible {
@@ -272,7 +272,7 @@ header {
   padding: 12rem 5rem 3.2rem;
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 1200px;
   margin: 0 auto; }
   .banner .heroImg-container {
@@ -302,6 +302,7 @@ header {
       letter-spacing: -0.015em;
       color: #010101;
       font-weight: 700;
+      font-size: 1.8rem;
       cursor: pointer; }
 
 /*----DOWNLOAD BORDER----*/
