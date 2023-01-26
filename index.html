@@ -54,13 +54,6 @@
           <li class="menu__items">
             <a class="menu__link" href="#contact"> Contacto </a>
           </li>
-          <!--<li class="menu__items">
-            <a> Es <i class="fa-solid fa-play"></i> </a>
-            <ul>
-              <li><a class="menu__link"> Es </a></li>
-              <li><a class="menu__link"> Eng </a></li>
-            </ul>
-          </li>-->
         </ul>
         <button class="navbar-toggle">
           <i class="fas fa-bars"></i>
@@ -99,6 +92,14 @@
             />
           </figure>
         </div>
+        <div class="language-hint fade-container" id="fadeOutImg">
+          <figure class="tada-icon">
+            <img src="./images/tadaIcon.svg" alt="" />
+          </figure>
+          <label id="availableLanguage" data-i18n="available_lang"
+            >Spanish</label
+          >
+        </div>
       </div>
     </section>
 
@@ -113,7 +114,8 @@
             <div class="col-12 col-md-6">
               <article class="row justify-content-center">
                 <figure
-                  class="d-flex justify-content-center shippingImgContainer"
+                  class="d-flex justify-content-center shipping-container"
+                  id="shippingImg"
                 >
                   <img
                     class="img-fluid"
@@ -133,7 +135,8 @@
             <div class="col-12 col-md-6">
               <article class="row justify-content-center">
                 <figure
-                  class="d-flex justify-content-center startsImgContainer"
+                  class="d-flex justify-content-center starts-container"
+                  id="startsImg"
                 >
                   <img src="./images/stars.svg" alt="starts logo" />
                 </figure>
@@ -152,7 +155,10 @@
           <div class="row justify-content-center">
             <div class="col-12 col-md-6">
               <article class="row justify-content-center">
-                <figure class="d-flex justify-content-center heartImgContainer">
+                <figure
+                  class="d-flex justify-content-center pulse-container"
+                  id="pulseImg"
+                >
                   <img
                     class="img-fluid"
                     src="./images/hearts.svg"
@@ -171,7 +177,10 @@
             </div>
             <div class="col-12 col-md-6">
               <article class="row justify-content-center">
-                <figure class="d-flex justify-content-center giftImgContainer">
+                <figure
+                  class="d-flex justify-content-center gift-container"
+                  id="giftImg"
+                >
                   <img src="./images/gift.svg" alt="gift logo" />
                 </figure>
                 <h3 class="d-flex justify-content-center">
@@ -260,8 +269,6 @@
             </p>
           </article>
         </div>
-        <!-- Force next columns to break to new line at md breakpoint and up -->
-        <div class="w-100 d-none d-md-block"></div>
 
         <!--To Receive Section-->
         <div class="cardsToReceive" id="toReceive">
@@ -359,7 +366,7 @@
                 emails, hacer videollamadas y chatear con personas que están en
                 otros países ocurre casi de manera automática. La idea de Border
                 es poder crear esta misma interacción a través de transferencias
-                de dinero, en donde amigas o familiares puedan enviar dinero
+                de dinero, en donde amigos o familiares puedan enviar dinero
                 para cualquier ocasión, ya sea para un regalo o para compartir
                 momentos especiales como un viaje o una boda.
               </p>
@@ -414,13 +421,6 @@
               rellena el formulario correctamente.
             </p>
           </div>
-
-          <!--<div class="form__grupo form__grupo-btn-enviar">
-            <button type="submit" class="form__btn">Enviar</button>
-            <p class="form__mensaje-exito" id="form__mensaje-exito">
-              Formulario enviado correctamente!
-            </p>
-          </div>-->
         </form>
       </div>
     </section>
@@ -439,7 +439,7 @@
             Coming soon
           </button>
         </article>
-        <figure class="col-12 col-md-6">
+        <figure class="col-12 col-md-6 fadeIn-container" id="fadeInImg">
           <img
             class="img-fluid d-flex justify-content-center mx-auto"
             src="./images/mockupDownloadApp.webp"
@@ -659,13 +659,13 @@
             class="options__right d-grid d-lg-flex gap-2 gap-lg-5 align-items-lg-center"
           >
             <li class="options__items">
-              <a class="options__link" href="#home"> Home </a>
+              <a class="options__link" href="#home"> Inicio </a>
             </li>
             <li class="options__items">
-              <a class="options__link" href="#solutions"> Soluciones </a>
+              <a class="options__link" href="#meetBorder"> Soluciones </a>
             </li>
             <li class="options__items">
-              <a class="options__link" href="#howStart"> Cómo empezar </a>
+              <a class="options__link" href="#howToBorder"> Cómo empezar </a>
             </li>
           </div>
           <div
@@ -688,7 +688,10 @@
           >
             <img src="./images/twitter.svg" alt="" />
           </a>
-          <a class="footer-top__redes--link" href="">
+          <a
+            class="footer-top__redes--link"
+            href="https://www.linkedin.com/company/bordertransfer/"
+          >
             <img src="./images/linkedin.svg" alt="" />
           </a>
         </div>
