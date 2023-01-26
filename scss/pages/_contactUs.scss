@@ -1,11 +1,9 @@
 .contact {
-  /*display: flex;
-  flex-direction: column;*/
   padding: $sp-xxl $sp-xl;
   width: 100%;
   .subtitle {
     @include paragraph($paragraph-color);
-    max-width: 14em;
+    max-width: 33rem;
     text-align: center;
     margin: 0 auto;
   }

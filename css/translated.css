@@ -377,8 +377,6 @@ header {
     min-width: 25rem; }
 
 .contact {
-  /*display: flex;
-  flex-direction: column;*/
   padding: 8rem 5rem;
   width: 100%; }
   .contact .subtitle {
@@ -389,7 +387,7 @@ header {
     line-height: 24px;
     letter-spacing: -0.015em;
     color: #010101;
-    max-width: 14em;
+    max-width: 33rem;
     text-align: center;
     margin: 0 auto; }
   .contact .formulario {
