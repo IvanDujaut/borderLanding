@@ -13,9 +13,11 @@
   }
   .cardsToSend {
     @include cards(43em, 7.4rem);
+    animation: fade-in-left 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
   .cardsToReceive {
     @include cards(50em, 14rem);
     display: none;
+    animation: fade-in-right 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
 }

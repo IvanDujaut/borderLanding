@@ -11,11 +11,11 @@
 
 @keyframes bobble {
   0% {
-    transform: translateY(10px); }
+    transform: translateY(0px); }
   50% {
-    transform: translateY(40px); }
+    transform: translateY(15px); }
   100% {
-    transform: translateY(10px); } }
+    transform: translateY(0px); } }
 
 @keyframes shipping {
   0% {
@@ -81,6 +81,35 @@
   100% {
     transform: translateX(0);
     opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in-left {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes fade-in-right {
+  0% {
+    transform: translateX(50px);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    display: none; } }
 
 .contact .formulario__grupo-btn-enviar {
   padding: 0 7%; }
@@ -151,7 +180,7 @@ a {
   text-decoration: none;
   color: #010101; }
   a:hover {
-    color: #b2c136; }
+    color: #010101; }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -165,7 +194,7 @@ header {
   box-shadow: 0 0 7px #7b7b7b;
   position: fixed;
   z-index: 999;
-  background: #ffffff; }
+  background: #fffbda; }
   header .navbar {
     display: flex;
     align-items: center;
@@ -195,14 +224,14 @@ header {
       header .navbar .menu {
         flex-direction: column;
         align-items: flex-start;
-        background-color: #f7f9eb;
+        background: #fffbda;
         position: fixed;
         top: 86px;
         width: 100%;
         padding: 2rem;
         margin: 0 auto;
         gap: 1rem;
-        height: calc(100% - 86px);
+        height: auto;
         overflow-y: auto;
         right: -65%;
         transition: right 0.3s;
@@ -247,7 +276,33 @@ header {
   max-width: 1200px;
   margin: 0 auto; }
   .banner .heroImg-container {
-    animation: bobble 2s infinite; }
+    animation: bobble 8s infinite; }
+  .banner .language-hint {
+    width: 120px;
+    height: 36px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #b2c136;
+    color: #010101;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .banner .language-hint .tada-icon:hover {
+      animation: scale-up 0.8s linear both; }
+    .banner .language-hint label {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(1.4rem, calc(1.45vw + 0.26rem), 1.8rem);
+      line-height: 24px;
+      letter-spacing: -0.015em;
+      color: #010101;
+      font-weight: 700;
+      cursor: pointer; }
 
 /*----DOWNLOAD BORDER----*/
 .downloadBorder {
@@ -283,7 +338,12 @@ header {
       font-family: "Montserrat";
       font-style: normal; }
     .downloadBorder .description button:hover {
+      box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
       background-color: #f5e356; }
+  .downloadBorder .fadeIn-container {
+    opacity: 0; }
+  .downloadBorder .fadeIn {
+    animation: fade-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
 
 .aboutUs {
   padding: 8rem 5rem;
@@ -464,7 +524,8 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(34em, 37em));
     place-content: center;
-    gap: 3rem; }
+    gap: 3rem;
+    animation: fade-in-left 2s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
     .howToBorder .cardsToSend__description {
       display: flex;
       flex-direction: column;
@@ -496,7 +557,8 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(34em, 37em));
     place-content: center;
     gap: 3rem;
-    display: none; }
+    display: none;
+    animation: fade-in-right 2s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
     .howToBorder .cardsToReceive__description {
       display: flex;
       flex-direction: column;
@@ -534,14 +596,23 @@ header {
     margin: 0 auto; }
     .meetBorder__container h2 {
       max-width: 57rem; }
-    .meetBorder__container .shippingImgContainer {
-      animation: shipping 3.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite both; }
-    .meetBorder__container .startsImgContainer {
-      animation: starts 2s ease-in-out infinite both; }
-    .meetBorder__container .heartImgContainer {
-      animation: pulse 2s infinite; }
-    .meetBorder__container .giftImgContainer {
-      animation: gift 2s cubic-bezier(0.23, 1, 0.32, 1) infinite both; }
+    .meetBorder__container .shipping-container,
+    .meetBorder__container .starts-container,
+    .meetBorder__container .pulse-container,
+    .meetBorder__container .gift-container {
+      opacity: 0; }
+    .meetBorder__container .shippingIn {
+      opacity: 1;
+      animation: shipping 3.5s cubic-bezier(0.215, 0.61, 0.355, 1); }
+    .meetBorder__container .startsIn {
+      opacity: 1;
+      animation: fade-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
+    .meetBorder__container .pulseIn {
+      opacity: 1;
+      animation: pulse 4s cubic-bezier(0.23, 1, 0.32, 1); }
+    .meetBorder__container .giftIn {
+      opacity: 1;
+      animation: gift 3s cubic-bezier(0.23, 1, 0.32, 1); }
     .meetBorder__container p {
       font-family: "Montserrat";
       font-style: normal;
@@ -609,7 +680,6 @@ header {
         line-height: 24px;
         color: #7b7b7b; }
       .ourTeam .container-box .form__input:focus {
-        border: 3px solid #0075ff;
         outline: none;
         box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4); }
       .ourTeam .container-box .form__input-error {
@@ -661,7 +731,8 @@ header {
         cursor: pointer;
         transition: 0.1s ease all; }
       .ourTeam .container-box .form__btn:hover {
-        box-shadow: 3px 0px 30px #a3a3a3; }
+        box-shadow: 3px 0 30px #a3a3a3;
+        background-color: #f5e356; }
       .ourTeam .container-box .form__mensaje-exito {
         font-size: 14px;
         color: #119200;

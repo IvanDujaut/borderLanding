@@ -8,7 +8,31 @@
   margin: 0 auto;
 
   .heroImg-container {
-    animation: bobble 2s infinite;
+    animation: bobble 8s infinite;
+  }
+  .language-hint {
+    width: 120px;
+    height: 36px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: $primary-color;
+    color: $paragraph-color;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .tada-icon:hover {
+      animation: scale-up 0.8s linear both;
+    }
+    label {
+      @include paragraph($paragraph-color);
+      font-weight: 700;
+      cursor: pointer;
+    }
+    
   }
 }
 
@@ -43,7 +67,16 @@
       font-style: normal;
     }
     button:hover {
+      box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
       background-color: $terciary-color;
     }
+  }
+
+  .fadeIn-container {
+    opacity: 0;
+  }
+
+  .fadeIn {
+    animation: fade-in .5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   }
 }

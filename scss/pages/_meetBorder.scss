@@ -10,18 +10,32 @@
     h2 {
       max-width: 57rem;
     }
-    .shippingImgContainer {
-      animation: shipping 3.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite both;
+    .shipping-container,
+    .starts-container,
+    .pulse-container,
+    .gift-container {
+      opacity: 0;
     }
-    .startsImgContainer {
-      animation: starts 2s ease-in-out infinite both;
+    .shippingIn {
+      opacity: 1;
+      animation: shipping 3.5s cubic-bezier(0.215, 0.61, 0.355, 1);
     }
-    .heartImgContainer {
-      animation: pulse 2s infinite;
+
+    .startsIn {
+      opacity: 1;
+      animation: fade-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
     }
-    .giftImgContainer {
-      animation: gift 2s cubic-bezier(0.23, 1, 0.32, 1) infinite both;
+
+    .pulseIn {
+      opacity: 1;
+      animation: pulse 4s cubic-bezier(0.23, 1, 0.32, 1);
     }
+
+    .giftIn {
+      opacity: 1;
+      animation: gift 3s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
     p {
       @include paragraph(rgba(0, 0, 0, 0.8));
       max-width: 60rem;

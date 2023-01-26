@@ -54,7 +54,8 @@
         color: #7b7b7b;
       }
       &__input:focus {
-        border: 3px solid #0075ff;
+        //border: 3px solid #0075ff;
+        //border: 3px solid $primary-color;
         outline: none;
         box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
       }
@@ -118,7 +119,8 @@
         transition: 0.1s ease all;
       }
       &__btn:hover {
-        box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+        box-shadow: 3px 0 30px rgba(163, 163, 163, 1);
+        background-color: $terciary-color;
       }
       &__mensaje-exito {
         font-size: 14px;
