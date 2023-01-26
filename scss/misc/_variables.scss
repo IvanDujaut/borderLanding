@@ -15,7 +15,7 @@ $tagParagraph: #121629;
 $cardTitle-color: #373737;
 
 /* Font Sizes */
-$text-heading1: clamp(2.3rem, calc(3.8vw + 0.17rem), 3.8rem);//clamp(3.125rem, calc(3.8vw + 0.17rem), 3.8rem);
+$text-heading1: clamp(2.3rem, calc(3.8vw + 0.17rem), 3.8rem);
 $text-heading2: clamp(2.5rem, calc(3.1vw + 0.1rem), 4rem);
 $text-heading3: clamp(2rem, calc(2vw + 0.1rem), 2.4rem);
 $text-heading4: clamp(1.6rem, calc(2vw + 0.1rem), 2.5rem);
@@ -23,7 +23,7 @@ $text-heading5: clamp(1.28rem, calc(1.5vw + 0.12rem), 2rem);
 $text-paragraph: clamp(1.4rem, calc(1.45vw + 0.26rem), 1.8rem);
 $text-anchor: clamp(1.7rem, calc(2vw + 0.1rem), 2.4rem);
 $text-cards-title: clamp(1.6rem, calc(2vw + 0.1rem), 1.8rem);
-$text-cards-paragraph: clamp(1.4rem, calc(1.5vw + 0.75rem), 2.4rem); //clamp(1.4rem, calc(3vw + 0.1rem), 2.4rem);
+$text-cards-paragraph: clamp(1.4rem, calc(1.5vw + 0.75rem), 2.4rem);
 $text-secondary: 1.6em;
 $text-terciary: 1.2em;
 

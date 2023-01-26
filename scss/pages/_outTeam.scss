@@ -1,6 +1,6 @@
 /*----OUR TEAM----*/
 .ourTeam {
-  padding: $sp-xxxl $sp-xl; //con bt mejorar
+  padding: $sp-xxxl $sp-xl;
   position: relative;
   width: 100%;
   max-width: 1200px;
@@ -54,8 +54,6 @@
         color: #7b7b7b;
       }
       &__input:focus {
-        //border: 3px solid #0075ff;
-        //border: 3px solid $primary-color;
         outline: none;
         box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
       }
@@ -183,8 +181,6 @@
       .form__grupo-input {
         max-width: 55em;
         width: 50em;
-        /*width: 64.2em;
-        height: 7rem;*/
       }
     }
   }
@@ -199,7 +195,6 @@
           &-input {
             max-width: 90vw;
             height: 5rem;
-            //width: 30em;
             .form__input {
               padding: 0 11rem 0 1rem; //calc(5px + 8rem + 5px + 16px + 5px)
               font-size: 14px;

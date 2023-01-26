@@ -770,9 +770,7 @@ header {
         max-width: 70rem; }
       .ourTeam .container-box .form__grupo-input {
         max-width: 55em;
-        width: 50em;
-        /*width: 64.2em;
-        height: 7rem;*/ } }
+        width: 50em; } }
 
 @media screen and (max-width: 575.98px) {
   .ourTeam .container-box .form__grupo-input {
