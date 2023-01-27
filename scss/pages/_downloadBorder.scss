@@ -1,0 +1,43 @@
+.downloadBorder {
+  padding: $sp-xxl $sp-xl;
+  background-color: $green-background;
+  width: 100%;
+  &__container {
+    max-width: 1200px;
+  }
+  .description {
+    max-width: 56rem;
+    min-width: 30rem;
+    max-height: 26rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    p {
+      @include paragraph($paragraph-color);
+    }
+    button {
+      padding: 1.5rem 3rem;
+      max-height: 5.5rem;
+      background-color: $primary-color;
+      border-radius: 10px;
+      border: none;
+      font-weight: 700;
+      font-size: $text-paragraph;
+      color: $paragraph-color;
+      font-family: "Montserrat";
+      font-style: normal;
+    }
+    button:hover {
+      box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
+      background-color: $terciary-color;
+    }
+  }
+
+  .fadeIn-container {
+    opacity: 0;
+  }
+
+  .fadeIn {
+    animation: fade-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
+}

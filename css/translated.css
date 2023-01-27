@@ -193,7 +193,7 @@ header {
   box-shadow: 0 0 7px #7b7b7b;
   position: fixed;
   z-index: 999;
-  background: #fffbda; }
+  background: #ffffff; }
   header .navbar {
     display: flex;
     align-items: center;
@@ -223,7 +223,7 @@ header {
       header .navbar .menu {
         flex-direction: column;
         align-items: flex-start;
-        background: #fffbda;
+        background: #ffffff;
         position: fixed;
         top: 86px;
         width: 100%;
@@ -266,7 +266,6 @@ header {
     color: #010101; }
 
 /* PAGES */
-/*----BANNER----*/
 .banner {
   padding: 12rem 5rem 3.2rem;
   position: relative;
@@ -303,47 +302,6 @@ header {
       font-weight: 700;
       font-size: 1.8rem;
       cursor: pointer; }
-
-/*----DOWNLOAD BORDER----*/
-.downloadBorder {
-  padding: 8rem 5rem;
-  background-color: #b2c1361a;
-  width: 100%; }
-  .downloadBorder__container {
-    max-width: 1200px; }
-  .downloadBorder .description {
-    max-width: 56rem;
-    min-width: 30rem;
-    max-height: 26rem;
-    display: flex;
-    flex-direction: column;
-    row-gap: 3rem; }
-    .downloadBorder .description p {
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 400;
-      font-size: clamp(1.4rem, calc(1.45vw + 0.26rem), 1.8rem);
-      line-height: 24px;
-      letter-spacing: -0.015em;
-      color: #010101; }
-    .downloadBorder .description button {
-      padding: 1.5rem 3rem;
-      max-height: 5.5rem;
-      background-color: #b2c136;
-      border-radius: 10px;
-      border: none;
-      font-weight: 700;
-      font-size: clamp(1.4rem, calc(1.45vw + 0.26rem), 1.8rem);
-      color: #010101;
-      font-family: "Montserrat";
-      font-style: normal; }
-    .downloadBorder .description button:hover {
-      box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
-      background-color: #f5e356; }
-  .downloadBorder .fadeIn-container {
-    opacity: 0; }
-  .downloadBorder .fadeIn {
-    animation: fade-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
 
 .aboutUs {
   padding: 8rem 5rem;
@@ -509,6 +467,46 @@ header {
     .contact .formulario__grupo-incorrecto > .formulario__grupo-input > .formulario__input {
       border: 1px solid #bb2929; }
 
+.downloadBorder {
+  padding: 8rem 5rem;
+  background-color: #b2c1361a;
+  width: 100%; }
+  .downloadBorder__container {
+    max-width: 1200px; }
+  .downloadBorder .description {
+    max-width: 56rem;
+    min-width: 30rem;
+    max-height: 26rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem; }
+    .downloadBorder .description p {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(1.4rem, calc(1.45vw + 0.26rem), 1.8rem);
+      line-height: 24px;
+      letter-spacing: -0.015em;
+      color: #010101; }
+    .downloadBorder .description button {
+      padding: 1.5rem 3rem;
+      max-height: 5.5rem;
+      background-color: #b2c136;
+      border-radius: 10px;
+      border: none;
+      font-weight: 700;
+      font-size: clamp(1.4rem, calc(1.45vw + 0.26rem), 1.8rem);
+      color: #010101;
+      font-family: "Montserrat";
+      font-style: normal; }
+    .downloadBorder .description button:hover {
+      box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
+      background-color: #f5e356; }
+  .downloadBorder .fadeIn-container {
+    opacity: 0; }
+  .downloadBorder .fadeIn {
+    animation: fade-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
+
 .howToBorder {
   padding: 12rem 5rem;
   width: 100%; }
@@ -621,7 +619,6 @@ header {
       color: rgba(0, 0, 0, 0.8);
       max-width: 50rem; }
 
-/*----OUR TEAM----*/
 .ourTeam {
   padding: 12rem 5rem;
   position: relative;
