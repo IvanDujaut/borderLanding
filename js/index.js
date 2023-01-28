@@ -5,22 +5,19 @@ navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("menu_visible");
 });
 
-window.addEventListener("scroll", () => {
-  function swiping(direction) {
-    var animated = document.querySelectorAll(".swiping" + direction);
-    let scrollTop = document.documentElement.scrollTop;
-    for (var i = 0; i < animated.lenght; i++) {
-      let animatedHeight = animated[i].offsetTop;
-      if (animatedHeight <= scrollTop) {
-        animated[i].style.opacity = 1;
-        animated[i].classList.add("swiping" + direction);
-      }
-    }
-  }
+function toSend() {
+  document.getElementById("toReceive").style.display = "none";
+  document.getElementById("toSend").style.display = "grid";
+  document.getElementById("toReceiveAnchor").style.color = "#a0cbe3";
+  document.getElementById("toSendAnchor").style.color = "#5CB2E4";
+}
 
-  swiping("Left");
-  swiping("Right");
-});
+function toReceive() {
+  document.getElementById("toSend").style.display = "none";
+  document.getElementById("toReceive").style.display = "grid";
+  document.getElementById("toSendAnchor").style.color = "#a0cbe3";
+  document.getElementById("toReceiveAnchor").style.color = "#5CB2E4";
+}
 
 !(function ($) {
   "use strict";
@@ -97,16 +94,57 @@ window.addEventListener("scroll", () => {
   });
 })(jQuery);
 
-function toSend() {
-  document.getElementById("toReceive").style.display = "none";
-  document.getElementById("toSend").style.display = "grid";
-  document.getElementById("toReceiveAnchor").style.color = "#a0cbe3";
-  document.getElementById("toSendAnchor").style.color = "#5CB2E4";
-}
+// i18n
+!(function ($) {
+  $("#language").click(function () {
+    $.i18n().locale = $.i18n().locale == "en" ? "es" : "en";
+    $("html").i18n();
+  });
+  function getLocaleFromClientBrowser() {
+    return navigator.languages &&
+      navigator.languages.length &&
+      console.info(`language available: ${navigator.languages}`) &&
+      navigator.languages[0].indexOf("es") > 0
+      ? "es"
+      : "en";
+  }
+  jQuery(function ($) {
+    $.i18n()
+      .load({
+        en: "./i18n/en.json",
+        es: "./i18n/es.json",
+      })
+      .done(() => {
+        $.i18n().locale = getLocaleFromClientBrowser();
+        $("html").i18n();
+      });
+  });
+})(jQuery);
 
-function toReceive() {
-  document.getElementById("toSend").style.display = "none";
-  document.getElementById("toReceive").style.display = "grid";
-  document.getElementById("toSendAnchor").style.color = "#a0cbe3";
-  document.getElementById("toReceiveAnchor").style.color = "#5CB2E4";
-}
+
+// Navigation active state on scroll
+var nav_sections = $("section");
+var main_nav = $(".navbar, #mobile-nav");
+
+$(window).on("scroll", function () {
+  var cur_pos = $(this).scrollTop() + 200;
+
+  nav_sections.each(function () {
+    var top = $(this).offset().top,
+      bottom = top + $(this).outerHeight();
+
+    if (cur_pos >= top && cur_pos <= bottom) {
+      if (cur_pos <= bottom) {
+        console.log("entro para remover");
+        main_nav.find("li").removeClass("active");
+      }
+      main_nav
+        .find('a[href="#' + $(this).attr("id") + '"]')
+        .parent("li")
+        .addClass("active");
+    }
+    if (cur_pos < 300) {
+      $(".menu__items ul:first li:first").addClass("active");
+    }
+  });
+});

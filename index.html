@@ -24,6 +24,35 @@
       defer
       src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.0/jquery.validate.min.js"
     ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.messagestore.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.fallbacks.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.language.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.parser.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.emitter.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.emitter.bidi.min.js"
+    ></script>
+
     <script defer src="./js/index.js"></script>
     <script defer src="./js/effect.js"></script>
   </head>
@@ -43,16 +72,21 @@
         </a>
         <ul class="menu menu_visible">
           <li class="menu__items">
-            <a class="menu__link" href="#meetBorder"> Solutions </a>
+            <a
+              class="menu__link"
+              href="#meetBorder"
+              data-i18n="menu_solutions"
+            ></a>
           </li>
           <li class="menu__items">
-            <a class="menu__link" href="#howToBorder"> How to start </a>
+            <a class="menu__link" href="#howToBorder" data-i18n="menu_start">
+            </a>
           </li>
           <li class="menu__items">
-            <a class="menu__link" href="#aboutUs"> About us </a>
+            <a class="menu__link" href="#aboutUs" data-i18n="menu_us"> </a>
           </li>
           <li class="menu__items">
-            <a class="menu__link" href="#contact"> Contact </a>
+            <a class="menu__link" href="#contact" data-i18n="menu_contact"> </a>
           </li>
         </ul>
         <button class="navbar-toggle">
@@ -76,10 +110,7 @@
                   alt="Logo de Border"
                 />
               </figure>
-              <h1 class="lh-base">
-                An App to send and receive money internationally for social and
-                fun reasons
-              </h1>
+              <h1 class="lh-base" data-i18n="hero_title"></h1>
             </article>
           </div>
         </div>
@@ -87,18 +118,16 @@
           <figure class="heroImg-container d-flex justify-content-center">
             <img
               class="img-fluid"
-              src="./images/imgHero.png"
+              src="./images/imgHero.webp"
               alt="Imagen principal"
             />
           </figure>
         </div>
-        <div class="language-hint fade-container" id="fadeOutImg">
+        <div id="language" class="language-hint fade-container" id="fadeOutImg">
           <figure class="tada-icon">
             <img src="./images/tadaIcon.svg" alt="" />
           </figure>
-          <label id="availableLanguage" data-i18n="available_lang"
-            >Español</label
-          >
+          <label data-i18n="alternative_language"></label>
         </div>
       </div>
     </section>
@@ -107,7 +136,7 @@
     <section class="meetBorder container-fluid" id="meetBorder">
       <div class="container-fluid meetBorder__container">
         <div class="row gap-5 d-flex justify-content-center">
-          <h2 class="row">Everything you need to start bordering</h2>
+          <h2 class="row" data-i18n="meetBorder_title"></h2>
           <div class="row justify-content-center">
             <div class="col-12 col-md-6">
               <article class="row justify-content-center">
@@ -121,12 +150,14 @@
                     alt="shipping logo"
                   />
                 </figure>
-                <h3 class="d-flex justify-content-center">
-                  Send money to friends and family
-                </h3>
-                <p class="text-center text-md-start">
-                  With Border you can transfer when you want and where you want.
-                </p>
+                <h3
+                  class="d-flex justify-content-center"
+                  data-i18n="meetBorder_subtitle-send"
+                ></h3>
+                <p
+                  class="text-center text-md-start"
+                  data-i18n="meetBorder_description-send"
+                ></p>
               </article>
             </div>
             <div class="col-12 col-md-6">
@@ -137,12 +168,14 @@
                 >
                   <img src="./images/stars.svg" alt="starts logo" />
                 </figure>
-                <h3 class="d-flex justify-content-center">Split the costs</h3>
-                <p class="text-center text-md-start">
-                  Do you share streaming accounts like Netflix or Spotify with
-                  friends or family? With Border you can split those costs even
-                  living in different countries.
-                </p>
+                <h3
+                  class="d-flex justify-content-center"
+                  data-i18n="meetBorder_subtitle-split"
+                ></h3>
+                <p
+                  class="text-center text-md-start"
+                  data-i18n="meetBorder_description-split"
+                ></p>
               </article>
             </div>
           </div>
@@ -162,14 +195,14 @@
                     alt="hearts logo"
                   />
                 </figure>
-                <h3 class="d-flex justify-content-center">
-                  Share the good times
-                </h3>
-                <p class="text-center text-md-start">
-                  With Border you can settle up with your friends for any
-                  activity - from trips together to destination weddings where
-                  everyone meets in one place.
-                </p>
+                <h3
+                  class="d-flex justify-content-center"
+                  data-i18n="meetBorder_subtitle-share"
+                ></h3>
+                <p
+                  class="text-center text-md-start"
+                  data-i18n="meetBorder_description-share"
+                ></p>
               </article>
             </div>
             <div class="col-12 col-md-6">
@@ -180,13 +213,14 @@
                 >
                   <img src="./images/gift.svg" alt="gift logo" />
                 </figure>
-                <h3 class="d-flex justify-content-center">
-                  Surprise by sending gifts
-                </h3>
-                <p class="text-center text-md-start">
-                  With Border you can send gifts for any occasion - from
-                  birthdays to graduation celebrations.
-                </p>
+                <h3
+                  class="d-flex justify-content-center"
+                  data-i18n="meetBorder_subtitle-surprise"
+                ></h3>
+                <p
+                  class="text-center text-md-start"
+                  data-i18n="meetBorder_description-surprise"
+                ></p>
               </article>
             </div>
           </div>
@@ -197,7 +231,7 @@
     <!--HOW TO BORDEAR-->
     <section class="howToBorder container-fluid" id="howToBorder">
       <div class="row d-flex justify-content-center gap-5">
-        <h2 class="text-center">How to border</h2>
+        <h2 class="text-center" data-i18n="howToBorder_title"></h2>
         <ul class="options d-flex justify-content-center gap-5">
           <li>
             <a
@@ -205,9 +239,8 @@
               class="options__item"
               href="javascript:void(0)"
               onclick="toSend()"
-            >
-              To send
-            </a>
+              data-i18n="options_toSend"
+            ></a>
           </li>
           <li>
             <a
@@ -215,8 +248,8 @@
               class="options__item options__item--toReceive"
               href="javascript:void(0)"
               onclick="toReceive()"
-              >To receive</a
-            >
+              data-i18n="options_toReceive"
+            ></a>
           </li>
         </ul>
 
@@ -230,8 +263,8 @@
                 alt="download app image"
               />
             </figure>
-            <h3>Download the App</h3>
-            <p>Sign up for free using your email and phone number.</p>
+            <h3 data-i18n="toSend_subtitle-download"></h3>
+            <p data-i18n="toSend_description-download"></p>
           </article>
 
           <article class="cardsToSend__description">
@@ -242,11 +275,8 @@
                 alt="how to add money to your account image"
               />
             </figure>
-            <h3>Transfer money into your account</h3>
-            <p>
-              You can use debit or credit cards, virtual wallets or make
-              transfers from your bank.
-            </p>
+            <h3 data-i18n="toSend_subtitle-transfer"></h3>
+            <p data-i18n="toSend_description-transfer"></p>
           </article>
 
           <article class="cardsToSend__description">
@@ -259,11 +289,8 @@
                 alt="are you ready to border image"
               />
             </figure>
-            <h3>You are ready to Border!</h3>
-            <p>
-              Choose who you want to send money to, add their email and phone
-              number, and you are done!
-            </p>
+            <h3 data-i18n="toSend_subtitle-ready"></h3>
+            <p data-i18n="toSend_description-ready"></p>
           </article>
         </div>
 
@@ -277,11 +304,8 @@
                 alt="download app image"
               />
             </figure>
-            <h3>Receive the confirmation by email</h3>
-            <p>
-              Every time you receive a transfer, we'll confirm the total and the
-              sender via email.
-            </p>
+            <h3 data-i18n="toReceive_subtitle-receive"></h3>
+            <p data-i18n="toReceive_description-receive"></p>
           </article>
 
           <article class="cardsToReceive__description">
@@ -292,12 +316,8 @@
                 alt="how to add money to your account image"
               />
             </figure>
-            <h3>Download or go into the App</h3>
-            <p>
-              If you already have it on your phone, you can go into the App to
-              check the transfer. If you haven't downloaded it yet, the email
-              will have a link to download the App from your mobile store.
-            </p>
+            <h3 data-i18n="toReceive_subtitle-download"></h3>
+            <p data-i18n="toReceive_description-download"></p>
           </article>
 
           <article class="cardsToReceive__description">
@@ -308,11 +328,8 @@
                 alt="are you ready to border image"
               />
             </figure>
-            <h3>Congratulations, you are part of Border!</h3>
-            <p>
-              Once you confirm the transfer you’ll be able to use the money for
-              whatever you want.
-            </p>
+            <h3 data-i18n="toReceive_subtitle-congratulations"></h3>
+            <p data-i18n="toReceive_description-congratulations"></p>
           </article>
         </div>
       </div>
@@ -321,7 +338,7 @@
     <!--ABOUT US-->
     <section class="aboutUs container-fluid" id="aboutUs">
       <div class="container-fluid aboutUs__container">
-        <h2 class="text-center">About us</h2>
+        <h2 class="text-center" data-i18n="aboutUs_title"></h2>
         <div class="row gap-5">
           <div class="container d-flex flex-wrap-reverse align-items-center">
             <figure class="col-12 col-md-6 swipingLeft-container" id="leftImg">
@@ -332,11 +349,14 @@
               />
             </figure>
             <article class="col-12 col-md-6">
-              <h3 class="text-center text-md-start">Who we are?</h3>
-              <p class="text-center text-md-start">
-                Border is a platform to send and receive money internationally
-                in a fast and safe way and for social and fun reasons.
-              </p>
+              <h3
+                class="text-center text-md-start"
+                data-i18n="aboutUs_subtitle-who"
+              ></h3>
+              <p
+                class="text-center text-md-start"
+                data-i18n="aboutUs_description-who"
+              ></p>
             </article>
           </div>
 
@@ -357,16 +377,14 @@
               />
             </figure>
             <article class="col-12 col-md-6">
-              <h3 class="text-center text-md-start">How Border started?</h3>
-              <p class="text-center text-md-start">
-                Today we live in a super connected world, where sending emails,
-                making video calls and chatting with people in other countries
-                happens almost automatically. Border's idea is to be able to
-                create this same interaction through money transfers, where
-                friends and family can send money for fun occasions, whether
-                it's for a gift or to share special moments like a trip or a
-                wedding.
-              </p>
+              <h3
+                class="text-center text-md-start"
+                data-i18n="aboutUs_subtitle-how"
+              ></h3>
+              <p
+                class="text-center text-md-start"
+                data-i18n="aboutUs_description-how"
+              ></p>
             </article>
           </div>
         </div>
@@ -377,11 +395,8 @@
     <section class="ourTeam container-fluid row" id="ourTeam">
       <div class="col-12 container-fluid d-grid gap-3 container-box">
         <article class="ourTeam__description">
-          <h2 class="text-center">Our team</h2>
-          <p class="text-center">
-            We are always looking for new people who share our vision and
-            enthusiasm to keep Border growing.
-          </p>
+          <h2 class="text-center" data-i18n="ourTeam_title"></h2>
+          <p class="text-center" data-i18n="ourTeam_description"></p>
         </article>
         <form
           class="form col-9 container-fluid justify-content-center"
@@ -400,22 +415,24 @@
               />
               <i class="form__validacion-estado fas fa-times-circle"></i>
               <div class="form__grupo form__grupo-btn-enviar">
-                <button type="submit" class="form__btn">Send</button>
-                <p class="form__mensaje-exito" id="form__mensaje-exito">
-                  Form sent successfully!
-                </p>
+                <button
+                  type="submit"
+                  class="form__btn"
+                  data-i18n="btn_send"
+                ></button>
+                <p
+                  class="form__mensaje-exito"
+                  id="form__mensaje-exito"
+                  data-i18n="form_successMessage"
+                ></p>
               </div>
             </div>
-            <p class="form__input-error">
-              El correo solo puede contener letras, numeros, puntos, guiones y
-              guiones bajos.
-            </p>
+            <p class="form__input-error" data-i18n="form_errorMessage"></p>
           </div>
 
           <div class="form__mensaje" id="form__mensaje">
-            <p>
-              <i class="fas fa-exclamation-triangle"></i><b>Error:</b> Please
-              fill out the form correctly.
+            <p data-i18n="form_error">
+              <i class="fas fa-exclamation-triangle"></i><b>Error:</b>
             </p>
           </div>
         </form>
@@ -428,13 +445,15 @@
         class="downloadBorder__container container-fluid d-flex flex-wrap flex-md-nowrap align-items-center justify-content-center gap-5 gap-md-0"
       >
         <article class="description col-12 col-md-6">
-          <h3 class="my-0 px-0 text-start">Download Border to your phone</h3>
-          <p class="col-11 col-sm-8 col-md-10 col-lg-9 my-0 px-0">
-            Click on the button below and join the waitlist!
-          </p>
-          <button class="col-7 col-sm-5 col-md-6 col-lg-5 col-xxl-4">
-            Coming soon
-          </button>
+          <h3 class="my-0 px-0 text-start" data-i18n="download_title"></h3>
+          <p
+            class="col-11 col-sm-8 col-md-10 col-lg-9 my-0 px-0"
+            data-i18n="download_description"
+          ></p>
+          <button
+            class="col-7 col-sm-5 col-md-6 col-lg-5 col-xxl-4"
+            data-i18n="btn_download"
+          ></button>
         </article>
         <figure class="col-12 col-md-6 fadeIn-container" id="fadeInImg">
           <img
@@ -448,11 +467,8 @@
 
     <!--CONTACT US-->
     <section class="container contact" id="contact">
-      <h2>Contact</h2>
-      <p class="subtitle">
-        Do you want to talk to us? We are here to help you.
-      </p>
-
+      <h2 data-i18n="contact_title"></h2>
+      <p class="subtitle" data-i18n="contact_subtitle"></p>
       <form
         action="forms/sendmail.php"
         method="post"
@@ -465,7 +481,11 @@
           class="col-12 col-md-7 text-center formulario__grupo"
           id="grupo__name"
         >
-          <label for="name" class="formulario__label">First name</label>
+          <label
+            for="name"
+            class="formulario__label"
+            data-i18n="contact_name"
+          ></label>
           <div class="formulario__grupo-input">
             <input
               type="text"
@@ -476,10 +496,7 @@
               required
             />
           </div>
-          <p class="formulario__input-error">
-            El nombre tiene que ser de 4 a 16 digitos y solo debe contener
-            numeros, letras y guion bajo.
-          </p>
+          <p class="formulario__input-error" data-i18n="contact_errorName"></p>
         </div>
 
         <!--Grupo: Apellido-->
@@ -487,7 +504,11 @@
           class="col-12 col-md-7 text-center formulario__grupo"
           id="grupo__surname"
         >
-          <label for="surname" class="formulario__label">Last name</label>
+          <label
+            for="surname"
+            class="formulario__label"
+            data-i18n="contact_surname"
+          ></label>
           <div class="formulario__grupo-input">
             <input
               type="text"
@@ -498,10 +519,10 @@
               required
             />
           </div>
-          <p class="formulario__input-error">
-            El apellido tiene que ser de 4 a 16 digitos y solo debe contener
-            numeros, letras y guion bajo.
-          </p>
+          <p
+            class="formulario__input-error"
+            data-i18n="contact_errorSurname"
+          ></p>
         </div>
 
         <!--Grupo: Email-->
@@ -509,7 +530,11 @@
           class="col-12 col-md-7 text-center formulario__grupo"
           id="grupo__email"
         >
-          <label for="email" class="formulario__label">Email</label>
+          <label
+            for="email"
+            class="formulario__label"
+            data-i18n="contact_email"
+          ></label>
           <div class="formulario__grupo-input">
             <input
               type="email"
@@ -520,10 +545,7 @@
               required
             />
           </div>
-          <p class="formulario__input-error">
-            El correo solo puede contener letras, numeros, puntos, guiones y
-            guiones bajos.
-          </p>
+          <p class="formulario__input-error" data-i18n="contact_errorEmail"></p>
         </div>
 
         <!--Grupo: Telefono-->
@@ -531,7 +553,11 @@
           class="col-12 col-md-7 text-center formulario__grupo"
           id="grupo__celphone"
         >
-          <label for="celphone" class="formulario__label">Phone number</label>
+          <label
+            for="celphone"
+            class="formulario__label"
+            data-i18n="contact_number"
+          ></label>
           <div class="formulario__grupo-input">
             <input
               type="number"
@@ -542,9 +568,10 @@
               required
             />
           </div>
-          <p class="formulario__input-error">
-            El teléfono solo puede contener numeros y el maximo son 14 digitos.
-          </p>
+          <p
+            class="formulario__input-error"
+            data-i18n="contact_errorNumber"
+          ></p>
         </div>
 
         <!--Grupo: Pais-->
@@ -552,9 +579,11 @@
           class="col-12 col-md-7 text-center formulario__grupo"
           id="grupo__country"
         >
-          <label for="country" class="formulario__label"
-            >Country where you live</label
-          >
+          <label
+            for="country"
+            class="formulario__label"
+            data-i18n="contact_country"
+          ></label>
           <div class="formulario__grupo-input">
             <input
               type="text"
@@ -565,7 +594,10 @@
               required
             />
           </div>
-          <p class="formulario__input-error">Error pais.</p>
+          <p
+            class="formulario__input-error"
+            data-i18n="contact_errorCountry"
+          ></p>
         </div>
 
         <!--Grupo: Nacionalidad-->
@@ -573,7 +605,11 @@
           class="col-12 col-md-7 text-center formulario__grupo"
           id="grupo__nationality"
         >
-          <label for="nationality" class="formulario__label">Nationality</label>
+          <label
+            for="nationality"
+            class="formulario__label"
+            data-i18n="contact_nationality"
+          ></label>
           <div class="formulario__grupo-input">
             <input
               type="text"
@@ -584,7 +620,10 @@
               required
             />
           </div>
-          <p class="formulario__input-error">Error Nacionalidad.</p>
+          <p
+            class="formulario__input-error"
+            data-i18n="contact_errorNationality"
+          ></p>
         </div>
 
         <!--Grupo: Mensaje-->
@@ -592,9 +631,12 @@
           class="col-12 col-md-7 text-center formulario__grupo"
           id="grupo__message"
         >
-          <label for="message" class="formulario__label">Message</label>
+          <label
+            for="message"
+            class="formulario__label"
+            data-i18n="contact_message"
+          ></label>
           <div class="formulario__grupo-input">
-            <!--<input type="text" class="form__input" name="message" id="message" placeholder="Mensaje">-->
             <textarea
               type="text"
               class="formulario__textarea"
@@ -606,7 +648,10 @@
               required
             ></textarea>
           </div>
-          <p class="formulario__input-error">Error Mensaje.</p>
+          <p
+            class="formulario__input-error"
+            data-i18n="contact_errorMessage"
+          ></p>
         </div>
 
         <!--Grupo: Terminos y condiciones-->
@@ -618,17 +663,20 @@
         </div> -->
 
         <div class="formulario__mensaje" id="alert-error">
-          <p>
-            <i class="fa-solid fa-triangle-exclamation"></i><b>Error: </b>Please
-            try again.
+          <p data-i18n="contact_alert-error">
+            <i class="fa-solid fa-triangle-exclamation"></i><b>Error: </b>
           </p>
         </div>
         <div class="formulario__mensaje" id="alert-success">
-          <p>Form sent successfully!</p>
+          <p data-i18n="form_successMessage"></p>
         </div>
 
         <div class="formulario__grupo formulario__grupo-btn-enviar">
-          <button type="submit" class="formulario__btn">Send</button>
+          <button
+            type="submit"
+            class="formulario__btn"
+            data-i18n="btn_send"
+          ></button>
         </div>
       </form>
     </section>
@@ -654,23 +702,35 @@
             class="options__right d-grid d-lg-flex gap-2 gap-lg-5 align-items-lg-center"
           >
             <li class="options__items">
-              <a class="options__link" href="#home"> Home </a>
+              <a class="options__link" href="#home" data-i18n="menu_home"></a>
             </li>
             <li class="options__items">
-              <a class="options__link" href="#meetBorder"> Solutions </a>
+              <a
+                class="options__link"
+                href="#meetBorder"
+                data-i18n="menu_solutions"
+              ></a>
             </li>
             <li class="options__items">
-              <a class="options__link" href="#howToBorder"> How to start </a>
+              <a
+                class="options__link"
+                href="#howToBorder"
+                data-i18n="menu_start"
+              ></a>
             </li>
           </div>
           <div
             class="options__left d-grid d-lg-flex gap-2 gap-lg-5 align-items-lg-center"
           >
             <li class="options__items">
-              <a class="options__link" href="#aboutUs"> About us </a>
+              <a class="options__link" href="#aboutUs" data-i18n="menu_us"></a>
             </li>
             <li class="options__items">
-              <a class="options__link" href="#contact"> Contact </a>
+              <a
+                class="options__link"
+                href="#contact"
+                data-i18n="menu_contact"
+              ></a>
             </li>
           </div>
         </ul>

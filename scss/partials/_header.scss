@@ -14,6 +14,11 @@ header {
     .menu {
       display: flex;
       gap: 5rem;
+
+      &__items:hover {
+        animation: scale-up 0.5s linear both;
+        @include fillStyles;
+      }
     }
 
     &-toggle {
@@ -64,4 +69,9 @@ header {
       }
     }
   }
+}
+
+.active {
+  animation: scale-up 0.5s linear both;
+  @include fillStyles;
 }

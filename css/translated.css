@@ -172,9 +172,9 @@ figure {
   margin: 0; }
 
 a {
-  font-family: "Roboto";
+  font-family: "Montserrat";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.6em;
   text-decoration: none;
   color: #010101; }
@@ -202,6 +202,14 @@ header {
     header .navbar .menu {
       display: flex;
       gap: 5rem; }
+      header .navbar .menu__items:hover {
+        animation: scale-up 0.5s linear both;
+        font-weight: 500;
+        background: #f5e356;
+        border: 2px solid #010101;
+        border-radius: 2em;
+        padding: 1px 1.2em;
+        text-align: center; }
     header .navbar-toggle {
       color: #7b7b7b;
       background: none;
@@ -239,6 +247,15 @@ header {
           right: -100%; }
       header .navbar-toggle {
         display: block !important; } }
+
+.active {
+  animation: scale-up 0.5s linear both;
+  font-weight: 500;
+  background: #f5e356;
+  border: 2px solid #010101;
+  border-radius: 2em;
+  padding: 1px 1.2em;
+  text-align: center; }
 
 .footer {
   padding: 8rem;

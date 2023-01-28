@@ -29,6 +29,15 @@
   color: $paragraph-color;
 }
 
+@mixin fillStyles {
+  font-weight: 500;
+  background: $terciary-color;
+  border: 2px solid $paragraph-color;
+  border-radius: ($text-terciary*2 + $text-secondary)/2;
+  padding: 1px $text-terciary;
+  text-align: center;
+}
+
 @mixin paragraph($color) {
   font-family: "Montserrat";
   font-style: normal;
