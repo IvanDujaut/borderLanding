@@ -1,3 +1,4 @@
+/*----Para desplegar el menu en la seccion mobile ----*/
 const navToggle = document.querySelector(".navbar-toggle");
 const navMenu = document.querySelector(".menu");
 
@@ -5,6 +6,8 @@ navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("menu_visible");
 });
 
+
+/*----Para switchear entre las secciones toSend y toReceive ----*/
 function toSend() {
   document.getElementById("toReceive").style.display = "none";
   document.getElementById("toSend").style.display = "grid";
@@ -19,6 +22,8 @@ function toReceive() {
   document.getElementById("toReceiveAnchor").style.color = "#5CB2E4";
 }
 
+
+/*----Para la funcionalidad del formulario ----*/
 !(function ($) {
   "use strict";
   // Formulario de contacto
@@ -94,6 +99,7 @@ function toReceive() {
   });
 })(jQuery);
 
+/*----Para la funcionalidad del cambio de idioma ----*/
 // i18n
 !(function ($) {
   $("#language").click(function () {
@@ -121,6 +127,8 @@ function toReceive() {
   });
 })(jQuery);
 
+
+/*----Para marcar en el header la seccion en donde estamos ----*/
 // Navigation active state on scroll
 var nav_sections = $("section");
 var main_nav = $(".navbar");
@@ -147,6 +155,7 @@ $(window).on("scroll", function () {
   });
 });
 
+/*----Para modificar el placeholder de los forms al cambiar de idioma ----*/
 // Define an object to hold the translations
 var translations = {
   en: {
@@ -206,3 +215,10 @@ toggleBtn.addEventListener("click", toggleLanguage);
 
 // Update the form with the default language
 updateForm();
+
+
+/*----Para eliminar el spin button en input del tipo number para Mozilla ----*/
+let inputField = document.getElementById("phone");
+
+inputField.style.WebkitAppearance = "none";
+inputField.style.MozAppearance = "textfield";

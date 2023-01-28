@@ -186,11 +186,6 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0; }
 
-input[type="number"]::-moz-inner-spin-button,
-input[type="number"]::-moz-outer-spin-button {
-  -moz-appearance: none;
-  margin: 0; }
-
 /* PARTIALS */
 header {
   padding: 0.8rem 8rem;
