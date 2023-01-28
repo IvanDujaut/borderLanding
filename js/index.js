@@ -121,10 +121,9 @@ function toReceive() {
   });
 })(jQuery);
 
-
 // Navigation active state on scroll
 var nav_sections = $("section");
-var main_nav = $(".navbar, #mobile-nav");
+var main_nav = $(".navbar");
 
 $(window).on("scroll", function () {
   var cur_pos = $(this).scrollTop() + 200;
@@ -135,7 +134,6 @@ $(window).on("scroll", function () {
 
     if (cur_pos >= top && cur_pos <= bottom) {
       if (cur_pos <= bottom) {
-        console.log("entro para remover");
         main_nav.find("li").removeClass("active");
       }
       main_nav
@@ -148,3 +146,63 @@ $(window).on("scroll", function () {
     }
   });
 });
+
+// Define an object to hold the translations
+var translations = {
+  en: {
+    emailOurTeam: "Enter your e-mail",
+    name: "First name",
+    surname: "Last name",
+    email: "Email",
+    phone: "Phone Number",
+    country: "Country where you live",
+    nationality: "Nationality",
+  },
+  es: {
+    emailOurTeam: "Ingresá tu e-mail",
+    name: "Nombre",
+    surname: "Apellido",
+    email: "Correo electrónico",
+    phone: "Número de teléfono",
+    country: "País",
+    nationality: "Nacionalidad",
+  },
+};
+
+// Get the form inputs
+var emailOurTeamInput = document.getElementById("e-mail");
+var nameInput = document.getElementById("name");
+var surnameInput = document.getElementById("surname");
+var emailInput = document.getElementById("email");
+var phoneInput = document.getElementById("phone");
+var countryInput = document.getElementById("country");
+var nationalityInput = document.getElementById("nationality");
+
+// Get the language toggle button
+var toggleBtn = document.getElementById("language");
+
+// Set the default language to English
+var currentLanguage = "en";
+
+// Function to toggle the language
+function toggleLanguage() {
+  currentLanguage = currentLanguage === "es" ? "en" : "es";
+  updateForm();
+}
+
+// Function to update the form with the current language
+function updateForm() {
+  emailOurTeamInput.placeholder = translations[currentLanguage].emailOurTeam;
+  nameInput.placeholder = translations[currentLanguage].name;
+  surnameInput.placeholder = translations[currentLanguage].surname;
+  emailInput.placeholder = translations[currentLanguage].email;
+  phoneInput.placeholder = translations[currentLanguage].phone;
+  countryInput.placeholder = translations[currentLanguage].country;
+  nationalityInput.placeholder = translations[currentLanguage].nationality;
+}
+
+// Listen for clicks on the toggle button
+toggleBtn.addEventListener("click", toggleLanguage);
+
+// Update the form with the default language
+updateForm();

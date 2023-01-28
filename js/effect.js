@@ -113,9 +113,7 @@ startsInObservador.observe(startsIn);
 pulseInObservador.observe(pulseIn);
 giftInObservador.observe(giftIn);
 
-/*Solapa de idiomas*/
 var miElemento = document.querySelector(".fade-container");
-
 window.addEventListener("scroll", () => {
   if (window.pageYOffset < 30) {
     miElemento.style.transition = "opacity .5s";
