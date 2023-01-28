@@ -242,7 +242,12 @@ header {
         overflow-y: auto;
         right: -65%;
         transition: right 0.3s;
-        z-index: 10; }
+        z-index: 10; } }
+      @media screen and (max-width: 768px) and (max-width: 550px) {
+        header .navbar .menu {
+          right: -50%; } }
+
+@media screen and (max-width: 768px) {
         header .navbar .menu_visible {
           right: -100%; }
       header .navbar-toggle {

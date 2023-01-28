@@ -56,6 +56,9 @@ header {
         height: auto;
         overflow-y: auto;
         right: -65%;
+        @media screen and (max-width: 550px) {
+          right: -50%; //arreglar esto
+        }
         transition: right 0.3s;
         z-index: 10;
 
@@ -70,6 +73,8 @@ header {
     }
   }
 }
+
+
 
 .active {
   animation: scale-up 0.5s linear both;
