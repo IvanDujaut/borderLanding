@@ -6,7 +6,6 @@ navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("menu_visible");
 });
 
-
 /*----Para switchear entre las secciones toSend y toReceive ----*/
 function toSend() {
   document.getElementById("toReceive").style.display = "none";
@@ -21,7 +20,6 @@ function toReceive() {
   document.getElementById("toSendAnchor").style.color = "#a0cbe3";
   document.getElementById("toReceiveAnchor").style.color = "#5CB2E4";
 }
-
 
 /*----Para la funcionalidad del formulario ----*/
 !(function ($) {
@@ -127,7 +125,6 @@ function toReceive() {
   });
 })(jQuery);
 
-
 /*----Para marcar en el header la seccion en donde estamos ----*/
 // Navigation active state on scroll
 var nav_sections = $("section");
@@ -216,9 +213,17 @@ toggleBtn.addEventListener("click", toggleLanguage);
 // Update the form with the default language
 updateForm();
 
-
 /*----Para eliminar el spin button en input del tipo number para Mozilla ----*/
 let inputField = document.getElementById("phone");
 
 inputField.style.WebkitAppearance = "none";
 inputField.style.MozAppearance = "textfield";
+
+
+/*----Para añadir el año de forma automatica ----*/
+window.onload = function () {
+  var currentDate = new Date();
+  var currentYear = currentDate.getFullYear();
+
+  document.querySelector(".year").innerHTML = currentYear;
+};
